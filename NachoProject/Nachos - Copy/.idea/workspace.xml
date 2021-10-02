@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="" />
+    <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/CS4310-OS-Nachos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/AutoGrader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/BasicTestGrader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/BoatGrader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/ThreadGrader9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/package.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ag/readme" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1xK2KLHoh0smeeoZ8LkfdOkjHo4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,7 +37,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Machine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -51,25 +74,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633129225743">
+    <state x="249" y="35" width="1102" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633134088542">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633129225743" />
-    <state width="1543" height="199" key="GridCell.Tab.0.bottom" timestamp="1630089749113">
+    <state x="249" y="35" width="1102" height="817" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1633134088542" />
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633134073194">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="199" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1630089749113" />
-    <state width="1543" height="199" key="GridCell.Tab.0.center" timestamp="1630089749113">
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633134073194" />
+    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633133848968">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="199" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1630089749113" />
-    <state width="1543" height="199" key="GridCell.Tab.0.left" timestamp="1630089749113">
+    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633133848968" />
+    <state width="1543" height="199" key="GridCell.Tab.0.bottom" timestamp="1633157080229">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="199" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1630089749113" />
-    <state width="1543" height="199" key="GridCell.Tab.0.right" timestamp="1630089749113">
+    <state width="1543" height="199" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633157080229" />
+    <state width="1543" height="199" key="GridCell.Tab.0.center" timestamp="1633157080229">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="199" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1630089749113" />
+    <state width="1543" height="199" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633157080229" />
+    <state width="1543" height="199" key="GridCell.Tab.0.left" timestamp="1633157080229">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1543" height="199" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633157080229" />
+    <state width="1543" height="199" key="GridCell.Tab.0.right" timestamp="1633157080229">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1543" height="199" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633157080229" />
   </component>
 </project>
