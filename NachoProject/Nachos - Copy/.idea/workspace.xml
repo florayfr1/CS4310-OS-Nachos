@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/ag/AutoGrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/ag/AutoGrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ThreadGrader1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/ag/ThreadGrader1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Condition2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Condition2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/ThreadQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/ThreadQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
