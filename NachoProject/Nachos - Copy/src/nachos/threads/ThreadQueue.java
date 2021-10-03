@@ -86,6 +86,7 @@ public abstract class ThreadQueue {
      * This method should not be called for a thread returned from
      * <tt>nextThread()</tt>.
      *
+     *
      * @param	thread	the thread that has received access, but was not
      * 			returned from <tt>nextThread()</tt>.
      */

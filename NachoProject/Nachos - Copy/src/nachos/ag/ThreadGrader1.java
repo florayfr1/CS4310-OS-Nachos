@@ -31,13 +31,15 @@ public class ThreadGrader1 extends BasicTestGrader
   
   public void run ()
   {
+
     assertTrue(ThreadedKernel.scheduler instanceof RoundRobinScheduler,
       "this test requires roundrobin scheduler");
-    
+
     lock = new Lock();
     cond = new Condition2[totalMax];
     for (int i = 0; i < totalMax; ++i)
     {
+
       cond[i] = new Condition2(lock);
     }
     

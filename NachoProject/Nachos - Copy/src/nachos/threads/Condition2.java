@@ -21,7 +21,10 @@ public class Condition2 {
      *				<tt>wake()</tt>, or <tt>wakeAll()</tt>.
      */
     public Condition2(Lock conditionLock) {
-	this.conditionLock = conditionLock;
+
+        this.conditionLock = conditionLock;
+        this.waitQueue = ThreadedKernel.scheduler.newThreadQueue(true);
+
     }
 
     /**
@@ -31,11 +34,16 @@ public class Condition2 {
      * automatically reacquire the lock before <tt>sleep()</tt> returns.
      */
     public void sleep() {
-	Lib.assertTrue(conditionLock.isHeldByCurrentThread());
+        Lib.assertTrue(conditionLock.isHeldByCurrentThread());
 
-	conditionLock.release();
+        conditionLock.release();
+        //All thread queue methods must be invoked with interrupts disabled.
+        boolean intStatus = Machine.interrupt().disable();
+        waitQueue.waitForAccess(KThread.currentThread());
+        KThread.currentThread().sleep();
+        Machine.interrupt().restore(intStatus);
+        conditionLock.acquire();
 
-	conditionLock.acquire();
     }
 
     /**
@@ -43,7 +51,16 @@ public class Condition2 {
      * current thread must hold the associated lock.
      */
     public void wake() {
-	Lib.assertTrue(conditionLock.isHeldByCurrentThread());
+        Lib.assertTrue(conditionLock.isHeldByCurrentThread());
+
+        boolean intStatus = Machine.interrupt().disable();
+        KThread p = waitQueue.nextThread();
+        if(p!= null) //if not empty
+        {
+            p.ready(); //place in scheduler ready queue
+        }
+        Machine.interrupt().restore(intStatus);
+
     }
 
     /**
@@ -51,8 +68,15 @@ public class Condition2 {
      * thread must hold the associated lock.
      */
     public void wakeAll() {
-	Lib.assertTrue(conditionLock.isHeldByCurrentThread());
+        Lib.assertTrue(conditionLock.isHeldByCurrentThread());
+
+        boolean intStatus = Machine.interrupt().disable();
+        while(waitQueue.nextThread() != null){
+            waitQueue.nextThread().ready();
+        }
+        Machine.interrupt().restore(intStatus);
     }
 
     private Lock conditionLock;
+    private ThreadQueue waitQueue;
 }
