@@ -194,7 +194,7 @@ public class KThread {
         toBeDestroyed = currentThread;
 
         lock.acquire();
-		cond.wake();
+		cond.wakeAll();
 		lock.release();
 
         currentThread.status = statusFinished;
@@ -283,6 +283,9 @@ public class KThread {
         //not current thread
         Lib.assertTrue(this != currentThread);
 
+        if(this.status == statusFinished){
+            return;
+        }
 
 		lock.acquire();
 		if(this.status != statusFinished){

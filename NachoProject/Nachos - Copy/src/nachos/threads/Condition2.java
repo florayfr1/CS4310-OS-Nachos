@@ -74,6 +74,7 @@ public class Condition2 {
         KThread p = waitQueue.nextThread();
         while(p != null){
             p.ready();
+            p = waitQueue.nextThread();
         }
         Machine.interrupt().restore(intStatus);
     }

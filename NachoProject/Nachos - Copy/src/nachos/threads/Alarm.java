@@ -7,6 +7,8 @@ import nachos.machine.*;
  * until a certain time.
  */
 public class Alarm {
+    private static Condition2 cond;
+    private static Lock lock;
     /**
      * Allocate a new Alarm. Set the machine's timer interrupt handler to this
      * alarm's callback.
@@ -15,9 +17,14 @@ public class Alarm {
      * alarm.
      */
     public Alarm() {
-	Machine.timer().setInterruptHandler(new Runnable() {
-		public void run() { timerInterrupt(); }
-	    });
+        lock = new Lock();
+        cond = new Condition2(lock);
+
+        Machine.timer().setInterruptHandler(new Runnable() {
+            public void run() {
+                timerInterrupt();
+            }
+        });
     }
 
     /**
@@ -27,8 +34,13 @@ public class Alarm {
      * that should be run.
      */
     public void timerInterrupt() {
-	KThread.currentThread().yield();
-    }
+        long currentTime = Machine.timer().getTime();
+        if (wakeTime > Machine.timer().getTime()) {
+            lock.acquire();
+            cond.wake();
+            lock.release();
+        }
+}
 
     /**
      * Put the current thread to sleep for at least <i>x</i> ticks,
@@ -40,14 +52,17 @@ public class Alarm {
      * (current time) >= (WaitUntil called time)+(x)
      * </blockquote>
      *
-     * @param	x	the minimum number of clock ticks to wait.
-     *
-     * @see	nachos.machine.Timer#getTime()
+     * @param    x    the minimum number of clock ticks to wait.
+     * @see    nachos.machine.Timer#getTime()
      */
     public void waitUntil(long x) {
-	// for now, cheat just to get something working (busy waiting is bad)
-	long wakeTime = Machine.timer().getTime() + x;
-	while (wakeTime > Machine.timer().getTime())
-	    KThread.yield();
+        // for now, cheat just to get something working (busy waiting is bad)
+        long wakeTime = Machine.timer().getTime() + x;
+        while (wakeTime > Machine.timer().getTime())
+
+            lock.acquire();
+            cond.sleep();
+            lock.release();
+
     }
 }
