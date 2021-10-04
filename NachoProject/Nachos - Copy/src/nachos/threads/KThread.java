@@ -283,11 +283,6 @@ public class KThread {
         //not current thread
         Lib.assertTrue(this != currentThread);
 
-        /*
-		if(this.status == statusFinished){
-			return;
-		}
-		*/
 
 		lock.acquire();
 		if(this.status != statusFinished){
@@ -295,8 +290,6 @@ public class KThread {
 		}
 
 		lock.release();
-
-
     }
 
     /**
