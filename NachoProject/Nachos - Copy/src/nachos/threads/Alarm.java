@@ -2,13 +2,16 @@ package nachos.threads;
 
 import nachos.machine.*;
 
+import java.util.PriorityQueue;
+
 /**
  * Uses the hardware timer to provide preemption, and to allow threads to sleep
  * until a certain time.
  */
 public class Alarm {
-    private static Condition2 cond;
+
     private static Lock lock;
+    private static PriorityQueue<AlarmThread> alarmPriorityQueue;
     /**
      * Allocate a new Alarm. Set the machine's timer interrupt handler to this
      * alarm's callback.
@@ -18,7 +21,8 @@ public class Alarm {
      */
     public Alarm() {
         lock = new Lock();
-        cond = new Condition2(lock);
+
+        alarmPriorityQueue = new PriorityQueue<>();
 
         Machine.timer().setInterruptHandler(new Runnable() {
             public void run() {
@@ -35,11 +39,22 @@ public class Alarm {
      */
     public void timerInterrupt() {
         long currentTime = Machine.timer().getTime();
-        if (wakeTime > Machine.timer().getTime()) {
+
+        AlarmThread temp = alarmPriorityQueue.poll();
+
+        while (temp != null && currentTime >= temp.getWakeTime())
+        {
+
             lock.acquire();
-            cond.wake();
+            temp.condition.wake();
             lock.release();
+
+            temp = alarmPriorityQueue.poll();
         }
+
+        KThread.currentThread().yield();
+
+
 }
 
     /**
@@ -58,11 +73,45 @@ public class Alarm {
     public void waitUntil(long x) {
         // for now, cheat just to get something working (busy waiting is bad)
         long wakeTime = Machine.timer().getTime() + x;
-        while (wakeTime > Machine.timer().getTime())
-
+        if(wakeTime > Machine.timer().getTime()) {
+            //priority queue; priority = waketime
+            AlarmThread alarmThread = new AlarmThread(KThread.currentThread(), wakeTime);
+            alarmPriorityQueue.add(alarmThread);
             lock.acquire();
-            cond.sleep();
+            alarmThread.condition.sleep();
             lock.release();
+        }
+    }
 
+    private class AlarmThread implements Comparable<AlarmThread>
+    {
+        private KThread thread;
+        private long wakeTime;
+        private Condition2 condition; //every thread have a condition variable
+
+        public AlarmThread(KThread thread, long wakeTime){
+            this.thread = thread;
+            this.wakeTime = wakeTime;
+            condition = new Condition2(lock);
+        }
+
+        public KThread getThread() {
+            return thread;
+        }
+
+        public long getWakeTime() {
+            return wakeTime;
+        }
+
+        @Override
+        public int compareTo(AlarmThread other) {
+            if (this.wakeTime < other.wakeTime) {
+                return -1;
+            }
+            if (this.wakeTime == other.wakeTime) {
+                return 0;
+            }
+            return 1;
+        }
     }
 }

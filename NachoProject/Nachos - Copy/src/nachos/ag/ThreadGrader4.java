@@ -50,6 +50,7 @@ public class ThreadGrader4 extends BasicTestGrader
     count = 0;
     total = 100;
     for (int i = 0; i < 100; ++i)
+      //change seed for test
       forkNewThread(new PingTest(Lib.random(1000)));
     while (count != total)
     {

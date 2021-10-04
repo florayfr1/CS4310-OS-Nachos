@@ -283,16 +283,18 @@ public class KThread {
         //not current thread
         Lib.assertTrue(this != currentThread);
 
+
         if(this.status == statusFinished){
             return;
         }
 
+        boolean intStatus = Machine.interrupt().disable();
 		lock.acquire();
 		if(this.status != statusFinished){
 			cond.sleep();
 		}
-
 		lock.release();
+        Machine.interrupt().restore(intStatus);
     }
 
     /**

@@ -79,6 +79,6 @@ public class Condition2 {
         Machine.interrupt().restore(intStatus);
     }
 
-    private Lock conditionLock;
-    private ThreadQueue waitQueue;
+    private static Lock conditionLock;
+    private static ThreadQueue waitQueue;
 }

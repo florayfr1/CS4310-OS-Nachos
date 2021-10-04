@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ThreadGrader4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/ag/ThreadGrader4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Alarm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Condition2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Condition2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/Lock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Lock.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +28,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/nachos/proj1" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader3_Join">
+  <component name="RunManager" selected="Application.ThreadGrader4_WaitUntil">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -69,9 +69,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadGrader4_WaitUntil" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
+      <module name="Nachos" />
+      <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader4" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ThreadGrader1_Condition2" />
       <item itemvalue="Application.ThreadGrader3_Join" />
+      <item itemvalue="Application.ThreadGrader4_WaitUntil" />
       <item itemvalue="Application.ThreadGrader2_Communicator" />
       <item itemvalue="Application.Machine" />
     </list>
@@ -90,57 +100,61 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="498" y="14" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633304968431">
+    <state x="407" y="39" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633381965847">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="498" y="14" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1633304968431" />
+    <state x="407" y="39" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1633381965847" />
     <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1633218886199">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.852@0.0.1600.852" timestamp="1633218886199" />
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633304839741">
+    <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1633379682009">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633304839741" />
+    <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1600.852@0.0.1600.852" timestamp="1633379682009" />
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633381944296">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633381944296" />
     <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633222853915">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.852@0.0.1600.852" timestamp="1633222853915" />
-    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633304853813">
+    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633381954641">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633304853813" />
-    <state width="1543" height="284" key="GridCell.Tab.0.bottom" timestamp="1633374063364">
+    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633381954641" />
+    <state width="1543" height="253" key="GridCell.Tab.0.bottom" timestamp="1633385178308">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="284" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633374063364" />
-    <state width="1543" height="284" key="GridCell.Tab.0.center" timestamp="1633374063363">
+    <state width="1543" height="253" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
+    <state width="1543" height="253" key="GridCell.Tab.0.center" timestamp="1633385178308">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="284" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633374063363" />
-    <state width="1543" height="284" key="GridCell.Tab.0.left" timestamp="1633374063363">
+    <state width="1543" height="253" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
+    <state width="1543" height="253" key="GridCell.Tab.0.left" timestamp="1633385178308">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="284" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633374063363" />
-    <state width="1543" height="284" key="GridCell.Tab.0.right" timestamp="1633374063364">
+    <state width="1543" height="253" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
+    <state width="1543" height="253" key="GridCell.Tab.0.right" timestamp="1633385178308">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="284" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633374063364" />
-    <state width="1543" height="249" key="GridCell.Tab.1.bottom" timestamp="1633224931447">
+    <state width="1543" height="253" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
+    <state width="1543" height="308" key="GridCell.Tab.1.bottom" timestamp="1633384917781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="249" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633224931447" />
-    <state width="1543" height="249" key="GridCell.Tab.1.center" timestamp="1633224931447">
+    <state width="1543" height="308" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633384917781" />
+    <state width="1543" height="308" key="GridCell.Tab.1.center" timestamp="1633384917781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="249" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633224931447" />
-    <state width="1543" height="249" key="GridCell.Tab.1.left" timestamp="1633224931447">
+    <state width="1543" height="308" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633384917781" />
+    <state width="1543" height="308" key="GridCell.Tab.1.left" timestamp="1633384917780">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="249" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633224931447" />
-    <state width="1543" height="249" key="GridCell.Tab.1.right" timestamp="1633224931447">
+    <state width="1543" height="308" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633384917780" />
+    <state width="1543" height="308" key="GridCell.Tab.1.right" timestamp="1633384917781">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="249" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633224931447" />
+    <state width="1543" height="308" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633384917781" />
   </component>
 </project>
