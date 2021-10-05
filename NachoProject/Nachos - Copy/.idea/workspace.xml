@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/ag/ThreadGrader4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/ag/ThreadGrader4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Alarm$AlarmThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Alarm$AlarmThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Alarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Alarm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Alarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/Condition2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Condition2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +119,10 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633381944296" />
+    <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1633392511601">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.852@0.0.1600.852" timestamp="1633392511601" />
     <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633222853915">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -124,37 +131,48 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633381954641" />
-    <state width="1543" height="253" key="GridCell.Tab.0.bottom" timestamp="1633385178308">
+    <state width="1544" height="205" key="GridCell.Tab.0.bottom" timestamp="1633456236201">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="253" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
-    <state width="1543" height="253" key="GridCell.Tab.0.center" timestamp="1633385178308">
+    <state width="1544" height="205" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633456236201" />
+    <state width="1544" height="205" key="GridCell.Tab.0.center" timestamp="1633456236201">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="253" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
-    <state width="1543" height="253" key="GridCell.Tab.0.left" timestamp="1633385178308">
+    <state width="1544" height="205" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633456236201" />
+    <state width="1544" height="205" key="GridCell.Tab.0.left" timestamp="1633456236201">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="253" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
-    <state width="1543" height="253" key="GridCell.Tab.0.right" timestamp="1633385178308">
+    <state width="1544" height="205" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633456236201" />
+    <state width="1544" height="205" key="GridCell.Tab.0.right" timestamp="1633456236201">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="253" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633385178308" />
-    <state width="1543" height="308" key="GridCell.Tab.1.bottom" timestamp="1633384917781">
+    <state width="1544" height="205" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633456236201" />
+    <state width="1544" height="308" key="GridCell.Tab.1.bottom" timestamp="1633456190717">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="308" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633384917781" />
-    <state width="1543" height="308" key="GridCell.Tab.1.center" timestamp="1633384917781">
+    <state width="1544" height="308" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633456190717" />
+    <state width="1544" height="308" key="GridCell.Tab.1.center" timestamp="1633456190717">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="308" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633384917781" />
-    <state width="1543" height="308" key="GridCell.Tab.1.left" timestamp="1633384917780">
+    <state width="1544" height="308" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633456190717" />
+    <state width="1544" height="308" key="GridCell.Tab.1.left" timestamp="1633456190717">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="308" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633384917780" />
-    <state width="1543" height="308" key="GridCell.Tab.1.right" timestamp="1633384917781">
+    <state width="1544" height="308" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633456190717" />
+    <state width="1544" height="308" key="GridCell.Tab.1.right" timestamp="1633456190717">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1543" height="308" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633384917781" />
+    <state width="1544" height="308" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633456190717" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nachos/threads/KThread.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

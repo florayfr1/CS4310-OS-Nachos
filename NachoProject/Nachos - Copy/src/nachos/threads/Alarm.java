@@ -38,21 +38,24 @@ public class Alarm {
      * that should be run.
      */
     public void timerInterrupt() {
+        KThread.currentThread().yield();
+
         long currentTime = Machine.timer().getTime();
 
-        AlarmThread temp = alarmPriorityQueue.poll();
+        AlarmThread temp = alarmPriorityQueue.peek();
 
         while (temp != null && currentTime >= temp.getWakeTime())
         {
-
+            System.out.println(temp);
+            System.out.println(currentTime+ "\t"+ temp.getWakeTime());
+            alarmPriorityQueue.remove(temp);
             lock.acquire();
             temp.condition.wake();
             lock.release();
 
-            temp = alarmPriorityQueue.poll();
+            temp = alarmPriorityQueue.peek();
         }
 
-        KThread.currentThread().yield();
 
 
 }
