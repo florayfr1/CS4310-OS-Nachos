@@ -120,6 +120,7 @@ public class ThreadGrader2 extends BasicTestGrader
     {
       list.add(word);
       com.speak(word);
+
       System.out.println(KThread.currentThread() + " say " + word);
     }
   }
@@ -129,6 +130,7 @@ public class ThreadGrader2 extends BasicTestGrader
     public void run ()
     {
       int w = com.listen();
+
       assertTrue(list.contains(new Integer(w)), "unknown message received");
       list.remove(new Integer(w));
       System.out.println(KThread.currentThread() + " listened " + w);

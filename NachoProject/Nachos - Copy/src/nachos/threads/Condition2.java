@@ -34,12 +34,11 @@ public class Condition2 {
      * automatically reacquire the lock before <tt>sleep()</tt> returns.
      */
     public void sleep() {
-        System.out.println(conditionLock.isHeldByCurrentThread());
         Lib.assertTrue(conditionLock.isHeldByCurrentThread());
-
 
         //All thread queue methods must be invoked with interrupts disabled.
         boolean intStatus = Machine.interrupt().disable();
+
         conditionLock.release();
         waitQueue.waitForAccess(KThread.currentThread());
         KThread.currentThread().sleep();
@@ -70,7 +69,7 @@ public class Condition2 {
      * thread must hold the associated lock.
      */
     public void wakeAll() {
-        System.out.println("2 "+conditionLock.isHeldByCurrentThread());
+
         Lib.assertTrue(conditionLock.isHeldByCurrentThread());
 
         boolean intStatus = Machine.interrupt().disable();
@@ -82,6 +81,6 @@ public class Condition2 {
         Machine.interrupt().restore(intStatus);
     }
 
-    private static Lock conditionLock;
-    private static ThreadQueue waitQueue;
+    private Lock conditionLock;
+    private ThreadQueue waitQueue;
 }

@@ -10,7 +10,7 @@ import java.util.PriorityQueue;
  */
 public class Alarm {
 
-    private static Lock lock;
+
     private static PriorityQueue<AlarmThread> alarmPriorityQueue;
     /**
      * Allocate a new Alarm. Set the machine's timer interrupt handler to this
@@ -20,8 +20,6 @@ public class Alarm {
      * alarm.
      */
     public Alarm() {
-        lock = new Lock();
-
         alarmPriorityQueue = new PriorityQueue<>();
 
         Machine.timer().setInterruptHandler(new Runnable() {
@@ -43,17 +41,12 @@ public class Alarm {
 
         AlarmThread temp = alarmPriorityQueue.peek();
 
-        System.out.println("current time: "+currentTime);
-        System.out.println(temp);
-        System.out.println("wake time: "+ temp.wakeTime);
         while (temp != null && currentTime >= temp.getWakeTime())
         {
-            System.out.print("out: "+temp);
-            System.out.println("\t"+ currentTime+ "\t"+ temp.getWakeTime());
             alarmPriorityQueue.remove(temp);
-            lock.acquire();
+            temp.lock.acquire();
             temp.condition.wake();
-            lock.release();
+            temp.lock.release();
 
             temp = alarmPriorityQueue.peek();
         }
@@ -82,9 +75,9 @@ public class Alarm {
             //priority queue; priority = waketime
             AlarmThread alarmThread = new AlarmThread(KThread.currentThread(), wakeTime);
             alarmPriorityQueue.add(alarmThread);
-            lock.acquire();
+            alarmThread.lock.acquire();
             alarmThread.condition.sleep();
-            lock.release();
+            alarmThread.lock.release();
         }
         //Machine.interrupt().restore(intStatus);
     }
@@ -93,11 +86,13 @@ public class Alarm {
     {
         private KThread thread;
         private long wakeTime;
+        private Lock lock;
         private Condition2 condition; //every thread have a condition variable
 
         public AlarmThread(KThread thread, long wakeTime){
             this.thread = thread;
             this.wakeTime = wakeTime;
+            lock = new Lock();
             condition = new Condition2(lock);
         }
 

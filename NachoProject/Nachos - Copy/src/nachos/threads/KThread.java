@@ -194,10 +194,10 @@ public class KThread {
         toBeDestroyed = currentThread;
 
         boolean intStatus = Machine.interrupt().disable();
-        lock.acquire();
-        System.out.println("1 "+lock.isHeldByCurrentThread());
-		cond.wakeAll(); //currentThread has to be the owner
-		lock.release();
+        currentThread().lock.acquire();
+
+        currentThread().cond.wakeAll(); //currentThread has to be the owner
+        currentThread().lock.release();
         Machine.interrupt().restore(intStatus);
 
         currentThread.status = statusFinished;
@@ -469,6 +469,6 @@ public class KThread {
     private static KThread toBeDestroyed = null;
     private static KThread idleThread = null;
 
-    private static Condition2 cond;
-	private static Lock lock;
+    private Condition2 cond;
+	private Lock lock;
 }

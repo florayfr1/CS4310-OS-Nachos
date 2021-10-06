@@ -16,15 +16,15 @@ public class Communicator {
     /**
      * Allocate a new communicator.
      */
-    private static Lock lock;
-    private static Condition2 speaker;
-    private static Condition2 listener;
+    private Lock lock;
+    private Condition2 speaker;
+    private Condition2 listener;
 
-    private static int countListener;
+    private int countListener;
 
 
-    private static int word;
-    private static boolean isWordUpdated;
+    private int word;
+    private boolean isWordUpdated;
 
     public Communicator() {
         lock = new Lock();
@@ -53,7 +53,6 @@ public class Communicator {
         //buf.isFull = isWordUpdated
         //buf.isEmpty = !isWordUpdated
         if (isWordUpdated || countListener == 0) {
-            System.out.println(lock.isHeldByCurrentThread());
             speaker.sleep();
         }
 
