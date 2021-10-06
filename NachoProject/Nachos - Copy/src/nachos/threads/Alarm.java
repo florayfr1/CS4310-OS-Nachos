@@ -38,16 +38,18 @@ public class Alarm {
      * that should be run.
      */
     public void timerInterrupt() {
-        KThread.currentThread().yield();
 
         long currentTime = Machine.timer().getTime();
 
         AlarmThread temp = alarmPriorityQueue.peek();
 
+        System.out.println("current time: "+currentTime);
+        System.out.println(temp);
+        System.out.println("wake time: "+ temp.wakeTime);
         while (temp != null && currentTime >= temp.getWakeTime())
         {
-            System.out.println(temp);
-            System.out.println(currentTime+ "\t"+ temp.getWakeTime());
+            System.out.print("out: "+temp);
+            System.out.println("\t"+ currentTime+ "\t"+ temp.getWakeTime());
             alarmPriorityQueue.remove(temp);
             lock.acquire();
             temp.condition.wake();
@@ -55,9 +57,7 @@ public class Alarm {
 
             temp = alarmPriorityQueue.peek();
         }
-
-
-
+        KThread.currentThread().yield();
 }
 
     /**
@@ -76,6 +76,8 @@ public class Alarm {
     public void waitUntil(long x) {
         // for now, cheat just to get something working (busy waiting is bad)
         long wakeTime = Machine.timer().getTime() + x;
+
+        //boolean intStatus = Machine.interrupt().disable();
         if(wakeTime > Machine.timer().getTime()) {
             //priority queue; priority = waketime
             AlarmThread alarmThread = new AlarmThread(KThread.currentThread(), wakeTime);
@@ -84,6 +86,7 @@ public class Alarm {
             alarmThread.condition.sleep();
             lock.release();
         }
+        //Machine.interrupt().restore(intStatus);
     }
 
     private class AlarmThread implements Comparable<AlarmThread>
