@@ -45,7 +45,11 @@ public class Alarm {
         {
             alarmPriorityQueue.remove(temp);
             temp.lock.acquire();
+
+            boolean intStatus = Machine.interrupt().disable();
             temp.condition.wake();
+            Machine.interrupt().restore(intStatus);
+
             temp.lock.release();
 
             temp = alarmPriorityQueue.peek();
@@ -76,7 +80,12 @@ public class Alarm {
             AlarmThread alarmThread = new AlarmThread(KThread.currentThread(), wakeTime);
             alarmPriorityQueue.add(alarmThread);
             alarmThread.lock.acquire();
+
+            boolean intStatus = Machine.interrupt().disable();
             alarmThread.condition.sleep();
+            Machine.interrupt().restore(intStatus);
+
+
             alarmThread.lock.release();
         }
         //Machine.interrupt().restore(intStatus);

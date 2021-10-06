@@ -193,12 +193,13 @@ public class KThread {
         Lib.assertTrue(toBeDestroyed == null);
         toBeDestroyed = currentThread;
 
-        boolean intStatus = Machine.interrupt().disable();
-        currentThread().lock.acquire();
 
+        currentThread().lock.acquire();
+        boolean intStatus = Machine.interrupt().disable();
         currentThread().cond.wakeAll(); //currentThread has to be the owner
-        currentThread().lock.release();
         Machine.interrupt().restore(intStatus);
+        currentThread().lock.release();
+
 
         currentThread.status = statusFinished;
         sleep();
@@ -290,13 +291,15 @@ public class KThread {
             return;
         }
 
-        boolean intStatus = Machine.interrupt().disable();
+
 		lock.acquire();
 		if(this.status != statusFinished){
+            boolean intStatus = Machine.interrupt().disable();
 			cond.sleep();
+            Machine.interrupt().restore(intStatus);
 		}
 		lock.release();
-        Machine.interrupt().restore(intStatus);
+
     }
 
     /**

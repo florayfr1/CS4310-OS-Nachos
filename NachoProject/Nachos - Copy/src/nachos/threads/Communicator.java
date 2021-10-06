@@ -3,6 +3,7 @@ package nachos.threads;
 import nachos.machine.*;
 
 import java.util.ArrayList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
@@ -16,22 +17,20 @@ public class Communicator {
     /**
      * Allocate a new communicator.
      */
-    private Lock lock;
-    private Condition2 speaker;
-    private Condition2 listener;
+
 
     private int countListener;
+    private int countSpeaker;
 
+    private static PriorityQueue<CommuncatorPair> pairsQueue;
+    private CommuncatorPair pair;
 
-    private int word;
-    private boolean isWordUpdated;
 
     public Communicator() {
-        lock = new Lock();
-        speaker = new Condition2(lock);
-        listener = new Condition2(lock);
+        pairsQueue = new PriorityQueue<>();
+        pair = new CommuncatorPair();
         countListener = 0;
-        isWordUpdated = false;
+        countSpeaker = 0;
     }
 
     /**
@@ -45,23 +44,13 @@ public class Communicator {
      * @param    word    the integer to transfer.
      */
     public void speak(int word) { //producer
-        lock.acquire();
+        countSpeaker++;
+        pair.setSpeakerThread(KThread.currentThread());
+        System.out.println("Speaker Test1: " +pair.speakerThread);
 
-        //buffer = word
-        //notEmpty = listener
-        //notFull = speaker
-        //buf.isFull = isWordUpdated
-        //buf.isEmpty = !isWordUpdated
-        if (isWordUpdated || countListener == 0) {
-            speaker.sleep();
-        }
+        pair.setWord(word);
 
-        this.word = word;
-        isWordUpdated = true;
-
-        listener.wake();
-
-        lock.release();
+        pairsQueue.add(pair);
     }
 
     /**
@@ -70,26 +59,53 @@ public class Communicator {
      *
      * @return the integer transferred.
      */
-    public int listen() { //consumer
-        //buffer = wordQueue
-        //notEmpty = listener
-        //notFull = speaker
+    public int listen() {
 
-        lock.acquire();
-        countListener++;
+        pair.setListenerThread(KThread.currentThread());
+        System.out.println("Listener Test1: " + pair.listenerThread);
 
-        if(!isWordUpdated){
-            listener.sleep();
+        CommuncatorPair currentPair = pairsQueue.poll();
+        return currentPair.word;
+    }
+
+    private class CommuncatorPair implements Comparable<CommuncatorPair>{
+        private Lock lock;
+        private Condition2 condSpeaker;
+        private Condition2 condListener;
+        private KThread speakerThread;
+        private KThread listenerThread;
+        private int word;
+
+        private long timeCreate;
+
+        public CommuncatorPair() {
+            lock = new Lock();
+            condSpeaker = new Condition2(lock);
+            condListener = new Condition2(lock);
+            timeCreate = Machine.timer().getTime();
         }
 
-        int message = word;
-        isWordUpdated = false;
+        public void setWord(int word) {
+            this.word = word;
+        }
 
-        speaker.wake();
+        public void setSpeakerThread(KThread speakerThread) {
+            this.speakerThread = speakerThread;
+        }
 
-        countListener--;
-        lock.release();
+        public void setListenerThread(KThread listenerThread) {
+            this.listenerThread = listenerThread;
+        }
 
-        return message;
+        @Override
+        public int compareTo(CommuncatorPair other) {
+            if (this.timeCreate < other.timeCreate) {
+                return -1;
+            }
+            if (this.timeCreate == other.timeCreate) {
+                return 0;
+            }
+            return 1;
+        }
     }
 }
