@@ -36,11 +36,11 @@ public class Condition2 {
     public void sleep() {
         Lib.assertTrue(conditionLock.isHeldByCurrentThread());
 
-        waitQueue.waitForAccess(KThread.currentThread());
-
         conditionLock.release();
         //All thread queue methods must be invoked with interrupts disabled.
         boolean intStatus = Machine.interrupt().disable();
+
+        waitQueue.waitForAccess(KThread.currentThread());
 
         KThread.currentThread().sleep();
 
@@ -56,15 +56,13 @@ public class Condition2 {
     public void wake() {
         Lib.assertTrue(conditionLock.isHeldByCurrentThread());
 
-
+        boolean intStatus = Machine.interrupt().disable();
         KThread p = waitQueue.nextThread();
         if(p!= null) //if not empty
         {
-            boolean intStatus = Machine.interrupt().disable();
             p.ready(); //place in scheduler ready queue
-            Machine.interrupt().restore(intStatus);
         }
-
+        Machine.interrupt().restore(intStatus);
 
     }
 

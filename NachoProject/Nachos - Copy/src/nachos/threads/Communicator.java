@@ -18,15 +18,21 @@ public class Communicator {
      * Allocate a new communicator.
      */
 
-
+    private Lock lock;
     private int countListener;
     private int countSpeaker;
+    private Condition2 condSpeaker;
+    private Condition2 condListener;
+
 
     private static PriorityQueue<CommuncatorPair> pairsQueue;
     private CommuncatorPair pair;
 
 
     public Communicator() {
+        lock = new Lock();
+        condSpeaker = new Condition2(lock);
+        condListener = new Condition2(lock);
         pairsQueue = new PriorityQueue<>();
         pair = new CommuncatorPair();
         countListener = 0;
@@ -44,13 +50,29 @@ public class Communicator {
      * @param    word    the integer to transfer.
      */
     public void speak(int word) { //producer
+        lock.acquire();
         countSpeaker++;
-        pair.setSpeakerThread(KThread.currentThread());
-        System.out.println("Speaker Test1: " +pair.speakerThread);
 
-        pair.setWord(word);
+        pair.setSpeakerThread(KThread.currentThread());
 
         pairsQueue.add(pair);
+        System.out.println("Speaker Test1: " +pair.speakerThread);
+
+        if(countListener == 0 && !pairsQueue.peek().isComplete()){
+
+            boolean intStatus = Machine.interrupt().disable();
+            condSpeaker.sleep();
+            Machine.interrupt().restore(intStatus);
+
+        }
+        pair.setWord(word);
+
+        boolean intStatus = Machine.interrupt().disable();
+        condListener.wake();
+        Machine.interrupt().restore(intStatus);
+
+        lock.release();
+
     }
 
     /**
@@ -60,18 +82,35 @@ public class Communicator {
      * @return the integer transferred.
      */
     public int listen() {
-
+        lock.acquire();
+        countListener++;
         pair.setListenerThread(KThread.currentThread());
         System.out.println("Listener Test1: " + pair.listenerThread);
 
+        if(countSpeaker==0 && !pairsQueue.peek().isComplete()){
+
+            boolean intStatus = Machine.interrupt().disable();
+            condListener.sleep();
+            Machine.interrupt().restore(intStatus);
+
+        }
+
         CommuncatorPair currentPair = pairsQueue.poll();
+        countListener--;
+        countSpeaker--;
+
+        boolean intStatus = Machine.interrupt().disable();
+        condSpeaker.wake();
+        Machine.interrupt().restore(intStatus);
+
+
+        lock.release();
         return currentPair.word;
     }
 
     private class CommuncatorPair implements Comparable<CommuncatorPair>{
-        private Lock lock;
-        private Condition2 condSpeaker;
-        private Condition2 condListener;
+
+
         private KThread speakerThread;
         private KThread listenerThread;
         private int word;
@@ -79,9 +118,6 @@ public class Communicator {
         private long timeCreate;
 
         public CommuncatorPair() {
-            lock = new Lock();
-            condSpeaker = new Condition2(lock);
-            condListener = new Condition2(lock);
             timeCreate = Machine.timer().getTime();
         }
 
@@ -95,6 +131,10 @@ public class Communicator {
 
         public void setListenerThread(KThread listenerThread) {
             this.listenerThread = listenerThread;
+        }
+
+        public boolean isComplete(){
+            return (speakerThread != null && listenerThread != null);
         }
 
         @Override
