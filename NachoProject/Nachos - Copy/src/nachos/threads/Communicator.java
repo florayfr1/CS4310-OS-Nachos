@@ -24,10 +24,7 @@ public class Communicator {
     private Condition2 condSpeaker;
     private Condition2 condListener;
 
-
     private static PriorityQueue<CommuncatorPair> pairsQueue;
-    private CommuncatorPair pair;
-
 
     public Communicator() {
         lock = new Lock();
@@ -52,7 +49,7 @@ public class Communicator {
     public void speak(int word) { //producer
         lock.acquire();
         countSpeaker++;
-        pair = new CommuncatorPair();
+        CommuncatorPair pair = new CommuncatorPair();
         pair.setSpeakerThread(KThread.currentThread());
 
         pairsQueue.add(pair);
@@ -63,14 +60,17 @@ public class Communicator {
             boolean intStatus = Machine.interrupt().disable();
             condSpeaker.sleep();
             Machine.interrupt().restore(intStatus);
-
         }
-        countSpeaker--;
-        pair.setWord(word);
+
+        pairsQueue.peek().setWord(word);
+
+        System.out.println(word);
 
         boolean intStatus = Machine.interrupt().disable();
         condListener.wake();
         Machine.interrupt().restore(intStatus);
+
+        countSpeaker--;
 
         lock.release();
 
@@ -85,8 +85,9 @@ public class Communicator {
     public int listen() {
         lock.acquire();
         countListener++;
-        pair.setListenerThread(KThread.currentThread());
-        System.out.println("Listener Test1: " + pair.listenerThread);
+        pairsQueue.peek().setListenerThread(KThread.currentThread()); //making it complete
+
+        System.out.println("Listener Test1: " + KThread.currentThread());
 
         if(countSpeaker==0 && !pairsQueue.peek().isComplete()){
 
@@ -96,16 +97,15 @@ public class Communicator {
 
         }
 
-        CommuncatorPair currentPair = pairsQueue.poll();
-        countListener--;
-
-
         boolean intStatus = Machine.interrupt().disable();
         condSpeaker.wake();
         Machine.interrupt().restore(intStatus);
 
+        CommuncatorPair currentPair = pairsQueue.poll();
+        countListener--;
 
         lock.release();
+
         return currentPair.word;
     }
 
@@ -114,12 +114,16 @@ public class Communicator {
 
         private KThread speakerThread;
         private KThread listenerThread;
+        //private Condition2 condSpeaker;
+        //private Condition2 condListener;
         private int word;
 
         private long timeCreate;
 
         public CommuncatorPair() {
             timeCreate = Machine.timer().getTime();
+            //condSpeaker = new Condition2(lock);
+            //condListener =  new Condition2(lock);
         }
 
         public void setWord(int word) {
