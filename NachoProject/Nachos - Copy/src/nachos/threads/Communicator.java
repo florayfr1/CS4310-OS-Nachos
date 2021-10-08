@@ -34,7 +34,7 @@ public class Communicator {
         condSpeaker = new Condition2(lock);
         condListener = new Condition2(lock);
         pairsQueue = new PriorityQueue<>();
-        pair = new CommuncatorPair();
+
         countListener = 0;
         countSpeaker = 0;
     }
@@ -52,7 +52,7 @@ public class Communicator {
     public void speak(int word) { //producer
         lock.acquire();
         countSpeaker++;
-
+        pair = new CommuncatorPair();
         pair.setSpeakerThread(KThread.currentThread());
 
         pairsQueue.add(pair);
@@ -65,6 +65,7 @@ public class Communicator {
             Machine.interrupt().restore(intStatus);
 
         }
+        countSpeaker--;
         pair.setWord(word);
 
         boolean intStatus = Machine.interrupt().disable();
@@ -97,7 +98,7 @@ public class Communicator {
 
         CommuncatorPair currentPair = pairsQueue.poll();
         countListener--;
-        countSpeaker--;
+
 
         boolean intStatus = Machine.interrupt().disable();
         condSpeaker.wake();

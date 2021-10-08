@@ -291,7 +291,6 @@ public class KThread {
             return;
         }
 
-
 		lock.acquire();
 		if(this.status != statusFinished){
             boolean intStatus = Machine.interrupt().disable();
@@ -473,5 +472,5 @@ public class KThread {
     private static KThread idleThread = null;
 
     private Condition2 cond;
-	private Lock lock;
+    private Lock lock;
 }
