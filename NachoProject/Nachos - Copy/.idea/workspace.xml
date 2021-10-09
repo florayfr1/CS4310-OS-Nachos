@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Communicator$CommuncatorPair.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Communicator$CommuncatorPair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Communicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Communicator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,49 +131,40 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633462955693" />
-    <state width="1544" height="270" key="GridCell.Tab.0.bottom" timestamp="1633669924721">
+    <state width="1544" height="204" key="GridCell.Tab.0.bottom" timestamp="1633742425863">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633669924721" />
-    <state width="1544" height="270" key="GridCell.Tab.0.center" timestamp="1633669924720">
+    <state width="1544" height="204" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633742425863" />
+    <state width="1544" height="204" key="GridCell.Tab.0.center" timestamp="1633742425862">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633669924720" />
-    <state width="1544" height="270" key="GridCell.Tab.0.left" timestamp="1633669924720">
+    <state width="1544" height="204" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633742425862" />
+    <state width="1544" height="204" key="GridCell.Tab.0.left" timestamp="1633742425862">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633669924720" />
-    <state width="1544" height="270" key="GridCell.Tab.0.right" timestamp="1633669924721">
+    <state width="1544" height="204" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633742425862" />
+    <state width="1544" height="204" key="GridCell.Tab.0.right" timestamp="1633742425863">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633669924721" />
-    <state width="1544" height="270" key="GridCell.Tab.1.bottom" timestamp="1633669514923">
+    <state width="1544" height="204" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633742425863" />
+    <state width="1544" height="329" key="GridCell.Tab.1.bottom" timestamp="1633741288450">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633669514923" />
-    <state width="1544" height="270" key="GridCell.Tab.1.center" timestamp="1633669514923">
+    <state width="1544" height="329" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
+    <state width="1544" height="329" key="GridCell.Tab.1.center" timestamp="1633741288450">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633669514923" />
-    <state width="1544" height="270" key="GridCell.Tab.1.left" timestamp="1633669514923">
+    <state width="1544" height="329" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
+    <state width="1544" height="329" key="GridCell.Tab.1.left" timestamp="1633741288450">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633669514923" />
-    <state width="1544" height="270" key="GridCell.Tab.1.right" timestamp="1633669514923">
+    <state width="1544" height="329" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
+    <state width="1544" height="329" key="GridCell.Tab.1.right" timestamp="1633741288450">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="270" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633669514923" />
+    <state width="1544" height="329" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nachos/threads/Communicator.java</url>
-          <line>60</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="lock.lockHolder.tcb" />

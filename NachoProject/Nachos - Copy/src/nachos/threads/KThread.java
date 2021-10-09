@@ -193,11 +193,9 @@ public class KThread {
         Lib.assertTrue(toBeDestroyed == null);
         toBeDestroyed = currentThread;
 
-
+        //currentThread = callee
         currentThread().lock.acquire();
-        boolean intStatus = Machine.interrupt().disable();
         currentThread().cond.wakeAll(); //currentThread has to be the owner
-        Machine.interrupt().restore(intStatus);
         currentThread().lock.release();
 
 
@@ -281,6 +279,7 @@ public class KThread {
      * thread.
      */
     public void join() {
+        //currentTHread = callee
         Lib.debug(dbgThread, "Joining to thread: " + toString());
 
         //not current thread
