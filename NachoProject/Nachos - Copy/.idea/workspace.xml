@@ -2,14 +2,163 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Communicator$CommuncatorPair.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Communicator$CommuncatorPair.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nachos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Nachos.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/AutoGrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/AutoGrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader$ThreadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader$ThreadHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BoatGrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BoatGrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader1$Printer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader1$Printer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader2$a.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader2$a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader2$b.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader2$b.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader3$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader3$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader4$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader4$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader5$a.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader5$a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader5.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$High.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$High.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$Low.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$Low.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$Med.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$Med.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$a.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6$a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader7$a.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader7$a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader7.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader8$a.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader8$a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader8.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader9$a.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader9$a.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader9.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/ThreadGrader9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ArrayFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ArrayFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/AssertionFailureError.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/AssertionFailureError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Coff.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Coff.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/CoffSection.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/CoffSection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$ElevatorManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$ElevatorManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$ElevatorManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$ElevatorManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$ElevatorState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$ElevatorState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$RiderState$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$RiderState$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$RiderState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank$RiderState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorBank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorControllerInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorControllerInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorControls.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorControls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorGui$ElevatorShaft.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorGui$ElevatorShaft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorGui$Floor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorGui$Floor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorGui.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorGui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$ElevatorController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$ElevatorController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$ElevatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$ElevatorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$Rider$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$Rider$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$Rider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest$Rider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/ElevatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/FileSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/FileSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Interrupt$InterruptPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Interrupt$InterruptPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Interrupt$PendingInterrupt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Interrupt$PendingInterrupt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Interrupt.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Interrupt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Kernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Kernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Lib.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Lib.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Machine$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Machine$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Machine$MachinePrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Machine$MachinePrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Machine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Machine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/MalformedPacketException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/MalformedPacketException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/NetworkLink.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/OpenFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/OpenFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/OpenFileWithPosition.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/OpenFileWithPosition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Packet.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Packet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Processor$Instruction.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Processor$Instruction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Processor$Mips.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Processor$Mips.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Processor$MipsException.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Processor$MipsException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Processor$ProcessorPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Processor$ProcessorPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Processor.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Processor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/RiderControls.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/RiderControls.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/RiderEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/RiderEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/RiderInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/RiderInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/SerialConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/SerialConsole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StandardConsole$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StandardConsole$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StandardConsole$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StandardConsole$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StandardConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StandardConsole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Stats.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Stats.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem$FileRemover.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem$FileRemover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem$StubOpenFile$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem$StubOpenFile$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem$StubOpenFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem$StubOpenFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/StubFileSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/TCB$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/TCB$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/TCB$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/TCB$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/TCB$TCBPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/TCB$TCBPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/TCB.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/TCB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Timer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Timer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Timer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Timer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/Timer.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/Timer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/machine/TranslationEntry.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/machine/TranslationEntry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/MailMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/MailMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/NetKernel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/NetKernel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/NetKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/NetKernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/NetProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/NetProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/PostOffice$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/PostOffice$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/PostOffice$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/PostOffice$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/PostOffice$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/PostOffice$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/network/PostOffice.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/network/PostOffice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager$PrivilegeProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager$PrivilegeProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/NachosSecurityManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/Privilege$InterruptPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/Privilege$InterruptPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/Privilege$MachinePrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/Privilege$MachinePrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/Privilege$ProcessorPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/Privilege$ProcessorPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/Privilege$TCBPrivilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/Privilege$TCBPrivilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/security/Privilege.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/security/Privilege.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Alarm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Alarm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Alarm$AlarmThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Alarm$AlarmThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Alarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Alarm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Boat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Boat$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Boat.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Boat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Communicator$CommuncatorPair.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Communicator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Communicator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Condition.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Condition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Condition2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Condition2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/ElevatorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/ElevatorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Lock.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Lock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/LotteryScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/LotteryScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Rider.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Rider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/RoundRobinScheduler$FifoQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/RoundRobinScheduler$FifoQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/RoundRobinScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/RoundRobinScheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Scheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Scheduler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Semaphore$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Semaphore$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/Semaphore.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/Semaphore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/SynchList$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/SynchList$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/SynchList.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/SynchList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/ThreadQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/ThreadQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/ThreadedKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/ThreadedKernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole$File.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole$File.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/SynchConsole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UThread$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UThread$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/vm/VMKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/vm/VMKernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/vm/VMProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/vm/VMProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/Alarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Alarm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +178,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../OOP-Example/code-samples-fall2020/ObserverPatternDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/nachos/proj1" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
   <component name="RunManager" selected="Application.ThreadGrader2_Communicator">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -81,7 +235,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadGrader5_PriorityScheduler_noDonation" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
+      <module name="Nachos" />
+      <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadGrader6_PriorityDonation" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
+      <module name="Nachos" />
+      <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
+      <item itemvalue="Application.ThreadGrader6_PriorityDonation" />
       <item itemvalue="Application.ThreadGrader1_Condition2" />
       <item itemvalue="Application.ThreadGrader3_Join" />
       <item itemvalue="Application.ThreadGrader4_WaitUntil" />
@@ -103,10 +277,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="407" y="39" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633497066370">
+    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633932810210">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="407" y="39" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1633497066370" />
+    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1633932810210" />
     <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1633218886199">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -115,10 +289,10 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1600.852@0.0.1600.852" timestamp="1633553158519" />
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633381944296">
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633932782440">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633381944296" />
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633932782440" />
     <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1633392511601">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -127,44 +301,69 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.852@0.0.1600.852" timestamp="1633222853915" />
-    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633462955693">
+    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633932802392">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633462955693" />
-    <state width="1544" height="204" key="GridCell.Tab.0.bottom" timestamp="1633742425863">
+    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633932802392" />
+    <state width="1544" height="189" key="GridCell.Tab.0.bottom" timestamp="1633977704087">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="204" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633742425863" />
-    <state width="1544" height="204" key="GridCell.Tab.0.center" timestamp="1633742425862">
+    <state width="1544" height="189" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633977704087" />
+    <state width="1544" height="189" key="GridCell.Tab.0.center" timestamp="1633977704087">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="204" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633742425862" />
-    <state width="1544" height="204" key="GridCell.Tab.0.left" timestamp="1633742425862">
+    <state width="1544" height="189" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1633977704087" />
+    <state width="1544" height="189" key="GridCell.Tab.0.left" timestamp="1633977704087">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="204" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633742425862" />
-    <state width="1544" height="204" key="GridCell.Tab.0.right" timestamp="1633742425863">
+    <state width="1544" height="189" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1633977704087" />
+    <state width="1544" height="189" key="GridCell.Tab.0.right" timestamp="1633977704087">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="204" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633742425863" />
-    <state width="1544" height="329" key="GridCell.Tab.1.bottom" timestamp="1633741288450">
+    <state width="1544" height="189" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1633977704087" />
+    <state width="1544" height="218" key="GridCell.Tab.1.bottom" timestamp="1633852400785">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="329" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
-    <state width="1544" height="329" key="GridCell.Tab.1.center" timestamp="1633741288450">
+    <state width="1544" height="218" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state width="1544" height="218" key="GridCell.Tab.1.center" timestamp="1633852400785">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="329" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
-    <state width="1544" height="329" key="GridCell.Tab.1.left" timestamp="1633741288450">
+    <state width="1544" height="218" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state width="1544" height="218" key="GridCell.Tab.1.left" timestamp="1633852400785">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="329" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
-    <state width="1544" height="329" key="GridCell.Tab.1.right" timestamp="1633741288450">
+    <state width="1544" height="218" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state width="1544" height="218" key="GridCell.Tab.1.right" timestamp="1633852400785">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="329" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633741288450" />
+    <state width="1544" height="218" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state x="673" y="65" key="RollbackChangesDialog" timestamp="1633852160735">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="673" y="65" key="RollbackChangesDialog/0.0.1600.852@0.0.1600.852" timestamp="1633852160735" />
+    <state x="69" y="0" key="SettingsEditor" timestamp="1633977693918">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="69" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1633977693918" />
+    <state x="534" y="117" width="675" height="655" key="StructurePopup" timestamp="1633934058983">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="534" y="117" width="675" height="655" key="StructurePopup/0.0.1600.852@0.0.1600.852" timestamp="1633934058983" />
+    <state x="379" y="-1" key="search.everywhere.popup" timestamp="1633934013029">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="379" y="-1" key="search.everywhere.popup/0.0.1600.852@0.0.1600.852" timestamp="1633934013029" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nachos/threads/Communicator.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="lock.lockHolder.tcb" />

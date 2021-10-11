@@ -109,6 +109,8 @@ public class PriorityScheduler extends Scheduler {
      */
     public static final int priorityMaximum = 7;
 
+    //TODO variable keep track of who call pickNectThread()
+
     /**
      * Return the scheduling state of the specified thread.
      *

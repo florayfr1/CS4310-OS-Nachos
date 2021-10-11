@@ -81,9 +81,9 @@ public class Alarm {
             alarmPriorityQueue.add(alarmThread);
             alarmThread.lock.acquire();
 
-            boolean intStatus = Machine.interrupt().disable();
+
             alarmThread.condition.sleep();
-            Machine.interrupt().restore(intStatus);
+
 
 
             alarmThread.lock.release();
