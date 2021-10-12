@@ -19,14 +19,18 @@ public class Communicator {
     private Lock lock;
     private Condition2 condSpeaker;
     private Condition2 condListener;
+    private Message message;
 
-    private static LinkedList<Message> speakerMessageList;
-    private static LinkedList<Message> listenerMessageList;
+    //private static LinkedList<Message> speakerMessageList;
+    //private static LinkedList<Message> listenerMessageList;
 
     public Communicator() {
         lock = new Lock();
-        speakerMessageList = new LinkedList<>();
-        listenerMessageList = new LinkedList<>();
+        message = new Message();
+        condSpeaker = new Condition2(lock);
+        condListener = new Condition2(lock);
+        //speakerMessageList = new LinkedList<>();
+        //listenerMessageList = new LinkedList<>();
     }
 
     /**
@@ -42,16 +46,12 @@ public class Communicator {
     public void speak(int word) {
         lock.acquire();
 
-        if(listenerMessageList.size()==0){
-            Message wordMessage = new Message();
-            wordMessage.setWord(word);
-            speakerMessageList.add(wordMessage);
-            wordMessage.cond.sleep();
-        } else{
-            listenerMessageList.getFirst().cond.wake();
-            if(!listenerMessageList.isEmpty())
-                listenerMessageList.removeFirst();
+        while (message.word!=-1){
+            condSpeaker.sleep();
         }
+        message.setWord(word);
+        condListener.wake();
+        message.cond.sleep();
 
         lock.release();
     }
@@ -67,17 +67,17 @@ public class Communicator {
         lock.acquire();
 
         int word = 0;
-        if(speakerMessageList.size()==0){
-            Message wordMessage = new Message();
-            listenerMessageList.add(wordMessage);
-            word = wordMessage.word;
-            wordMessage.cond.sleep();
-        } else{
-            word = speakerMessageList.getFirst().word;
-            speakerMessageList.getFirst().cond.wake();
-            if(!speakerMessageList.isEmpty())
-                speakerMessageList.removeFirst();
+
+        while (message.word == -1){
+            condListener.sleep();
         }
+
+        word = message.word;
+        message.setWord(-1);
+
+        condSpeaker.wake();
+
+        message.cond.wake();
 
         lock.release();
         return word;
@@ -88,7 +88,7 @@ public class Communicator {
         Condition2 cond;
 
         public Message() {
-            this.word = 0;
+            this.word = -1;
             cond = new Condition2(lock);
         }
 
