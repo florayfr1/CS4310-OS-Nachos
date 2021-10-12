@@ -20,6 +20,7 @@ public class Communicator {
     private Condition2 condSpeaker;
     private Condition2 condListener;
     private Message message;
+    private int countWaiting;
 
     //private static LinkedList<Message> speakerMessageList;
     //private static LinkedList<Message> listenerMessageList;
@@ -29,6 +30,7 @@ public class Communicator {
         message = new Message();
         condSpeaker = new Condition2(lock);
         condListener = new Condition2(lock);
+        countWaiting = 0;
         //speakerMessageList = new LinkedList<>();
         //listenerMessageList = new LinkedList<>();
     }
@@ -43,6 +45,7 @@ public class Communicator {
      *
      * @param word the integer to transfer.
      */
+
     public void speak(int word) {
         lock.acquire();
 
@@ -55,6 +58,7 @@ public class Communicator {
 
         lock.release();
     }
+
 
     /**
      * Wait for a thread to speak through this communicator, and then return
