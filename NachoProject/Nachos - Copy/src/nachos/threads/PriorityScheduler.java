@@ -154,7 +154,7 @@ public class PriorityScheduler extends Scheduler {
                 return null;
             }
 
-            queue.remove(threadState.thread);
+            //queue.remove(threadState.thread);
             return threadState.thread;
         }
 
@@ -166,9 +166,9 @@ public class PriorityScheduler extends Scheduler {
          * return.
          */
         protected ThreadState pickNextThread() {
-            if (queue.isEmpty() ) {
-                return null;
-            }
+            //if (queue.isEmpty() ) {
+            //    return null;
+            //}
 
             //TODO save who call this method
 
@@ -289,7 +289,7 @@ public class PriorityScheduler extends Scheduler {
             //TODO waitQueue is the resources this thread is waiting
             //TODO  remember which thread came sooner
 
-            waitQueue.queue.add(thread);
+            //waitQueue.queue.add(thread);
             // Effective priority of whole queue should be recalculated.
 
         }
