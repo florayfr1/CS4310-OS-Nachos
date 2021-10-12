@@ -132,6 +132,8 @@ public class PriorityScheduler extends Scheduler {
             this.transferPriority = transferPriority;
         }
 
+        //TODO find out when to recalculate effective priority
+
         public void waitForAccess(KThread thread) {
             Lib.assertTrue(Machine.interrupt().disabled());
             getThreadState(thread).waitForAccess(this);
@@ -140,12 +142,20 @@ public class PriorityScheduler extends Scheduler {
         public void acquire(KThread thread) {
             Lib.assertTrue(Machine.interrupt().disabled());
             getThreadState(thread).acquire(this);
+            //TODO thread is now holding the resources
         }
 
         public KThread nextThread() {
             Lib.assertTrue(Machine.interrupt().disabled());
             // implement me
-            return null;
+            //TODO
+            ThreadState threadState = pickNextThread();
+            if ( threadState == null ) {
+                return null;
+            }
+
+            queue.remove(threadState.thread);
+            return threadState.thread;
         }
 
         /**
@@ -156,6 +166,14 @@ public class PriorityScheduler extends Scheduler {
          * return.
          */
         protected ThreadState pickNextThread() {
+            if (queue.isEmpty() ) {
+                return null;
+            }
+
+            //TODO save who call this method
+
+            //TODO pick next Thread
+
             // implement me
             return null;
         }
@@ -170,6 +188,8 @@ public class PriorityScheduler extends Scheduler {
          * threads to the owning thread.
          */
         public boolean transferPriority;
+        //TODO queue that holds all the thread (id)
+        //TODO know which thread is holding the resources
     }
 
     /**
@@ -189,6 +209,8 @@ public class PriorityScheduler extends Scheduler {
         public ThreadState(KThread thread) {
             this.thread = thread;
 
+            //TODO initialize
+
             setPriority(priorityDefault);
         }
 
@@ -207,7 +229,33 @@ public class PriorityScheduler extends Scheduler {
          * @return the effective priority of the associated thread.
          */
         public int getEffectivePriority() {
+
             // implement me
+            //TODO calculate effective priority with donated priority; save it
+
+            // Only recalculate effective priority if required.
+
+
+            // Loop through all thread resources.
+
+            // If we have effective priority equal to maximum priority, there is no reason to continue
+
+
+
+            // Change effective priority only if transferPriority is true,
+            // there are some threads in queue and the current queue is
+            // not the queue, which called this method initially.
+
+
+
+            // Get thread state of thread with highest priority by calling pickNextThread
+
+            // If this is not this thread and effective priority is higher donate it to this thread.
+
+            // Do a sort of recursive call to getEffectivePriority(). It's not
+            // purely recursive, because instance of thread state on which method
+            // is called, is different from this thread state.
+
             return priority;
         }
 
@@ -238,6 +286,12 @@ public class PriorityScheduler extends Scheduler {
          */
         public void waitForAccess(PriorityQueue waitQueue) {
             // implement me
+            //TODO waitQueue is the resources this thread is waiting
+            //TODO  remember which thread came sooner
+
+            waitQueue.queue.add(thread);
+            // Effective priority of whole queue should be recalculated.
+
         }
 
         /**
@@ -252,6 +306,9 @@ public class PriorityScheduler extends Scheduler {
          */
         public void acquire(PriorityQueue waitQueue) {
             // implement me
+            //TODO(1.5) waitQueue from parameter now becomes one of resources on which this thread waits
+
+            // TODO Effective priority of whole queue should be recalculated.
         }
 
         /**
@@ -262,5 +319,11 @@ public class PriorityScheduler extends Scheduler {
          * The priority of the associated thread.
          */
         protected int priority;
+
+        //TODO variable save pervious conputede priority
+        //TODO boolean for need of recalculation
+        //TODO remember the queue from acquire and waitforacess
+        //TODO remember whicih thread came first
+        //
     }
 }
