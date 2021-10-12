@@ -2,6 +2,7 @@ package nachos.threads;
 
 import nachos.machine.*;
 
+import java.util.LinkedList;
 import java.util.TreeSet;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -140,9 +141,12 @@ public class PriorityScheduler extends Scheduler {
         }
 
         public void acquire(KThread thread) {
+
             Lib.assertTrue(Machine.interrupt().disabled());
             getThreadState(thread).acquire(this);
-            //TODO thread is now holding the resources
+
+            //thread is now holding the resources
+            threadWithResources = thread;
         }
 
         public KThread nextThread() {
@@ -188,8 +192,12 @@ public class PriorityScheduler extends Scheduler {
          * threads to the owning thread.
          */
         public boolean transferPriority;
-        //TODO queue that holds all the thread (id)
+
+        //queue that holds all the thread (id)
+        public LinkedList<ThreadState> queue;
+
         //TODO know which thread is holding the resources
+        public KThread threadWithResources;
     }
 
     /**
@@ -209,7 +217,7 @@ public class PriorityScheduler extends Scheduler {
         public ThreadState(KThread thread) {
             this.thread = thread;
 
-            //TODO initialize
+            //TODO initialize (implement comparable)
 
             setPriority(priorityDefault);
         }
@@ -289,7 +297,9 @@ public class PriorityScheduler extends Scheduler {
             //TODO waitQueue is the resources this thread is waiting
             //TODO  remember which thread came sooner
 
-            waitQueue.queue.add(thread);
+            //TODO CHECK ON THIS, ADDING THREAD ?
+            //waitQueue.queue.add(thread);
+            //queue inside the queue, we are adding the thread
             // Effective priority of whole queue should be recalculated.
 
         }
@@ -306,9 +316,12 @@ public class PriorityScheduler extends Scheduler {
          */
         public void acquire(PriorityQueue waitQueue) {
             // implement me
-            //TODO(1.5) waitQueue from parameter now becomes one of resources on which this thread waits
+            //TODO waitQueue from parameter now becomes one of resources on which this thread waits
+            ownedQueue.add(waitQueue);
 
             // TODO Effective priority of whole queue should be recalculated.
+            recalculate = true;
+            //wantQueue.recalcPriority();
         }
 
         /**
@@ -320,10 +333,17 @@ public class PriorityScheduler extends Scheduler {
          */
         protected int priority;
 
-        //TODO variable save pervious conputede priority
-        //TODO boolean for need of recalculation
+        //variable save pervious conputede priority
+        protected int savedPriority;
+
+        //boolean for need of recalculation
+        protected boolean recalculate;
+
         //TODO remember the queue from acquire and waitforacess
-        //TODO remember whicih thread came first
-        //
+        protected LinkedList<PriorityQueue> wantQueue; //resources that we're waiting on/want
+        protected LinkedList<PriorityQueue> ownedQueue; //resources that we have
+
+        //TODO remember which thread came first
+
     }
 }
