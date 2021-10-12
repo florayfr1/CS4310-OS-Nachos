@@ -2,6 +2,7 @@ package nachos.threads;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  * A <i>communicator</i> allows threads to synchronously exchange 32-bit
@@ -16,22 +17,16 @@ public class Communicator {
      */
 
     private Lock lock;
-    private int countListener;
-    private int countSpeaker;
-    //private Condition2 condSpeaker;
-    //private Condition2 condListener;
+    private Condition2 condSpeaker;
+    private Condition2 condListener;
 
-
-    private static ArrayList<CommunicatorPair> pairsList;
+    private static LinkedList<Message> speakerMessageList;
+    private static LinkedList<Message> listenerMessageList;
 
     public Communicator() {
         lock = new Lock();
-        //condSpeaker = new Condition2(lock);
-        //condListener = new Condition2(lock);
-        pairsList = new ArrayList<>();
-
-        countListener = 0;
-        countSpeaker = 0;
+        speakerMessageList = new LinkedList<>();
+        listenerMessageList = new LinkedList<>();
     }
 
     /**
@@ -44,51 +39,19 @@ public class Communicator {
      *
      * @param word the integer to transfer.
      */
-    public void speak(int word) { //producer
+    public void speak(int word) {
         lock.acquire();
-        countSpeaker++;
-        if(pairsList.isEmpty() || pairsList.get(pairsList.size()-1).speakerThread != null){ //list empty or previous pair already has a speaker
-            CommunicatorPair pair = new CommunicatorPair();
-            pair.setSpeakerThread(KThread.currentThread());
-            pair.setWord(word);
-            pairsList.add(pair);
+
+        if(listenerMessageList.size()==0){
+            Message wordMessage = new Message();
+            wordMessage.setWord(word);
+            speakerMessageList.add(wordMessage);
+            wordMessage.cond.sleep();
+        } else{
+            listenerMessageList.getFirst().cond.wake();
+            if(!listenerMessageList.isEmpty())
+                listenerMessageList.removeFirst();
         }
-
-        if (countListener == 0) {
-            pairsList.get(pairsList.size()-1).condSpeaker.sleep();
-        }
-
-        pairsList.get(0).setSpeakerThread(KThread.currentThread());
-        pairsList.get(0).setWord(word);
-
-        pairsList.get(0).condListener.wake();
-        countListener--;
-
-        lock.release();
-    }
-    /* record 43
-    public void speak(int word) { //producer
-        lock.acquire();
-        if (pairsList.isEmpty() || pairsList.get(0).speakerThread != null) {
-            CommunicatorPair pair = new CommunicatorPair();
-            pair.setSpeakerThread(KThread.currentThread());
-            pair.setWord(word);
-            pairsList.add(pair);
-        } else {
-            if (pairsList.get(0).listenerThread != null && pairsList.get(0).speakerThread == null){
-                pairsList.get(0).setSpeakerThread(KThread.currentThread());
-            }
-        }
-        if (countListener == 0) {
-            countSpeaker++;
-
-            condSpeaker.sleep();
-
-            //condListener.wake();
-            countSpeaker--;
-        } else {
-            condListener.wake();}
-
 
         lock.release();
     }
@@ -101,92 +64,36 @@ public class Communicator {
      */
 
     public int listen() {
-
         lock.acquire();
 
-        countListener++;
-
-        if(pairsList.isEmpty() || pairsList.get(pairsList.size()-1).listenerThread != null){
-            CommunicatorPair pair = new CommunicatorPair();
-            pair.setListenerThread(KThread.currentThread());
-            pairsList.add(pair);
+        int word = 0;
+        if(speakerMessageList.size()==0){
+            Message wordMessage = new Message();
+            listenerMessageList.add(wordMessage);
+            word = wordMessage.word;
+            wordMessage.cond.sleep();
+        } else{
+            word = speakerMessageList.getFirst().word;
+            speakerMessageList.getFirst().cond.wake();
+            if(!speakerMessageList.isEmpty())
+                speakerMessageList.removeFirst();
         }
 
-        if (countSpeaker == 0) {
-            //condListener.sleep();
-            pairsList.get(pairsList.size()-1).condListener.sleep();
-        }
-
-        pairsList.get(0).setListenerThread(KThread.currentThread());
-        pairsList.get(0).condSpeaker.wake();
-        countSpeaker--;
-
-
-        int message = pairsList.get(0).word;
-        pairsList.remove(0);
         lock.release();
-        System.out.println(message);
-        return message;
+        return word;
     }
 
-    /*
+    private class Message {
+        int word;
+        Condition2 cond;
 
-    public int listen() {
-        lock.acquire();
-        if (pairsList.isEmpty() || pairsList.get(0).listenerThread != null) {
-            CommunicatorPair pair = new CommunicatorPair();
-            pair.setListenerThread(KThread.currentThread());
-            pairsList.add(pair);
-        } else {
-            if (pairsList.get(0).speakerThread != null && pairsList.get(0).listenerThread == null){
-                pairsList.get(0).setListenerThread(KThread.currentThread());
-            }
-        }
-
-        if (countSpeaker != 0 && pairsList.get(0).isComplete()) {
-            condSpeaker.wake();
-            //condListener.sleep();
-        } else {
-            countListener++;
-            condListener.sleep();
-            countListener--;
-        }
-
-        int message = pairsList.get(0).word;
-        pairsList.remove(0);
-        lock.release();
-        return message;
-    }
-*/
-    private class CommunicatorPair {
-
-
-        private KThread speakerThread;
-        private KThread listenerThread;
-        private Condition2 condSpeaker;
-        private Condition2 condListener;
-        private int word;
-
-        public CommunicatorPair() {
-            condSpeaker = new Condition2(lock);
-            condListener = new Condition2(lock);
+        public Message() {
+            this.word = 0;
+            cond = new Condition2(lock);
         }
 
         public void setWord(int word) {
             this.word = word;
         }
-
-        public void setSpeakerThread(KThread speakerThread) {
-            this.speakerThread = speakerThread;
-        }
-
-        public void setListenerThread(KThread listenerThread) {
-            this.listenerThread = listenerThread;
-        }
-
-        public boolean isComplete() {
-            return (speakerThread != null && listenerThread != null);
-        }
-
     }
 }
