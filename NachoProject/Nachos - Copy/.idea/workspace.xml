@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +34,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader2_Communicator">
+  <component name="RunManager" selected="Application.ThreadGrader5_PriorityScheduler_noDonation">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -99,13 +103,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
-      <item itemvalue="Application.ThreadGrader6_PriorityDonation" />
+      <item itemvalue="Application.Machine" />
       <item itemvalue="Application.ThreadGrader1_Condition2" />
+      <item itemvalue="Application.ThreadGrader2_Communicator" />
       <item itemvalue="Application.ThreadGrader3_Join" />
       <item itemvalue="Application.ThreadGrader4_WaitUntil" />
-      <item itemvalue="Application.ThreadGrader2_Communicator" />
-      <item itemvalue="Application.Machine" />
+      <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
+      <item itemvalue="Application.ThreadGrader6_PriorityDonation" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -150,22 +154,22 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633932802392" />
-    <state width="726" height="3" key="GridCell.Tab.0.bottom" timestamp="1634020083915">
+    <state width="1544" height="99" key="GridCell.Tab.0.bottom" timestamp="1634241797975">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="726" height="3" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
-    <state width="726" height="3" key="GridCell.Tab.0.center" timestamp="1634020083915">
+    <state width="1544" height="99" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
+    <state width="1544" height="99" key="GridCell.Tab.0.center" timestamp="1634241797975">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="726" height="3" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
-    <state width="726" height="3" key="GridCell.Tab.0.left" timestamp="1634020083915">
+    <state width="1544" height="99" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
+    <state width="1544" height="99" key="GridCell.Tab.0.left" timestamp="1634241797975">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="726" height="3" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
-    <state width="726" height="3" key="GridCell.Tab.0.right" timestamp="1634020083915">
+    <state width="1544" height="99" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
+    <state width="1544" height="99" key="GridCell.Tab.0.right" timestamp="1634241797975">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="726" height="3" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
+    <state width="1544" height="99" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
     <state width="1544" height="218" key="GridCell.Tab.1.bottom" timestamp="1633852400785">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -200,6 +204,15 @@
     <state x="779" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1600.852@0.0.1600.852" timestamp="1634014811050" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nachos/threads/KThread.java</url>
+          <line>191</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="lock.lockHolder.tcb" />

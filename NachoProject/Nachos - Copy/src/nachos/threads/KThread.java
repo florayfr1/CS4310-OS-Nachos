@@ -189,6 +189,7 @@ public class KThread {
 
         Machine.interrupt().disable();
 
+        //TODO waitQueue must be empty
         currentThread.joinQueue.acquire(currentThread);
 
         Machine.autoGrader().finishingCurrentThread();
@@ -295,9 +296,10 @@ public class KThread {
         lock.acquire();
 		if(this.status != statusFinished){
             boolean intStatus = Machine.interrupt().disable();
-			cond.sleep();
+
 			joinQueue.acquire(this);
 			joinQueue.waitForAccess(currentThread);
+            cond.sleep();
             Machine.interrupt().restore(intStatus);
 		}
 		lock.release();
