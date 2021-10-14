@@ -194,7 +194,8 @@ public class PriorityScheduler extends Scheduler {
         public boolean transferPriority;
 
         //queue that holds all the thread (id)
-        public LinkedList<ThreadState> queue;
+        //TODO changed
+        public PriorityQueue queue;
 
         //TODO know which thread is holding the resources
         public KThread threadWithResources;
@@ -297,13 +298,13 @@ public class PriorityScheduler extends Scheduler {
             //TODO waitQueue is the resources this thread is waiting
             //TODO  remember which thread came sooner
 
-<<<<<<< HEAD
+
             //TODO CHECK ON THIS, ADDING THREAD ?
             //waitQueue.queue.add(thread);
             //queue inside the queue, we are adding the thread
-=======
+
             //waitQueue.queue.add(thread);
->>>>>>> b4c7fd9cffb03516d5f6c8c3d0431bd8a20dcd12
+
             // Effective priority of whole queue should be recalculated.
 
         }
@@ -321,12 +322,14 @@ public class PriorityScheduler extends Scheduler {
         public void acquire(PriorityQueue waitQueue) {
             // implement me
             //TODO waitQueue from parameter now becomes one of resources on which this thread waits
-            ownedQueue.add(waitQueue);
+            //ownedQueue.add(waitQueue);
 
             // TODO Effective priority of whole queue should be recalculated.
             recalculate = true;
             //wantQueue.recalcPriority();
         }
+
+        //TODO class note: circle/square one incoming many outcoming
 
         /**
          * The thread with which this object is associated.
@@ -345,7 +348,7 @@ public class PriorityScheduler extends Scheduler {
 
         //TODO remember the queue from acquire and waitforacess
         protected LinkedList<PriorityQueue> wantQueue; //resources that we're waiting on/want
-        protected LinkedList<PriorityQueue> ownedQueue; //resources that we have
+        protected KThread ownedQueue; //resources that we have
 
         //TODO remember which thread came first
 
