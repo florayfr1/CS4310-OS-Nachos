@@ -45,6 +45,7 @@ public class KThread {
     public KThread() {
     	lock = new Lock();
     	cond = new Condition2(lock);
+    	joinQueue = ThreadedKernel.scheduler.newThreadQueue(false);
 
         if (currentThread != null) {
             tcb = new TCB();
@@ -188,6 +189,8 @@ public class KThread {
 
         Machine.interrupt().disable();
 
+        currentThread.joinQueue.acquire(currentThread);
+
         Machine.autoGrader().finishingCurrentThread();
 
         Lib.assertTrue(toBeDestroyed == null);
@@ -285,15 +288,16 @@ public class KThread {
         //not current thread
         Lib.assertTrue(this != currentThread);
 
-
         if(this.status == statusFinished){
             return;
         }
 
-		lock.acquire();
+        lock.acquire();
 		if(this.status != statusFinished){
             boolean intStatus = Machine.interrupt().disable();
 			cond.sleep();
+			joinQueue.acquire(this);
+			joinQueue.waitForAccess(currentThread);
             Machine.interrupt().restore(intStatus);
 		}
 		lock.release();
@@ -464,6 +468,8 @@ public class KThread {
      * Number of times the KThread constructor was called.
      */
     private static int numCreated = 0;
+
+    private ThreadQueue joinQueue;
 
     private static ThreadQueue readyQueue = null;
     private static KThread currentThread = null;
