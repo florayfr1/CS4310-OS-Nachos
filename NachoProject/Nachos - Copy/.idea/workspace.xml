@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
     </list>
@@ -18,13 +17,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/nachos/proj1" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -108,7 +108,6 @@
       <item itemvalue="Application.Machine" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -121,6 +120,84 @@
       <updated>1630089393964</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1633932810210">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1633932810210" />
+    <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1633218886199">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.852@0.0.1600.852" timestamp="1633218886199" />
+    <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1633985599178">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1600.852@0.0.1600.852" timestamp="1633985599178" />
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633932782440">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633932782440" />
+    <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1633392511601">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.852@0.0.1600.852" timestamp="1633392511601" />
+    <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633222853915">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.852@0.0.1600.852" timestamp="1633222853915" />
+    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633932802392">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633932802392" />
+    <state width="726" height="3" key="GridCell.Tab.0.bottom" timestamp="1634020083915">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="3" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
+    <state width="726" height="3" key="GridCell.Tab.0.center" timestamp="1634020083915">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="3" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
+    <state width="726" height="3" key="GridCell.Tab.0.left" timestamp="1634020083915">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="3" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
+    <state width="726" height="3" key="GridCell.Tab.0.right" timestamp="1634020083915">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="3" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634020083915" />
+    <state width="1544" height="218" key="GridCell.Tab.1.bottom" timestamp="1633852400785">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="218" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state width="1544" height="218" key="GridCell.Tab.1.center" timestamp="1633852400785">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="218" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state width="1544" height="218" key="GridCell.Tab.1.left" timestamp="1633852400785">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="218" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state width="1544" height="218" key="GridCell.Tab.1.right" timestamp="1633852400785">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="218" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1633852400785" />
+    <state x="673" y="65" key="RollbackChangesDialog" timestamp="1633852160735">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="673" y="65" key="RollbackChangesDialog/0.0.1600.852@0.0.1600.852" timestamp="1633852160735" />
+    <state x="69" y="0" key="SettingsEditor" timestamp="1633977693918">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="69" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1633977693918" />
+    <state x="534" y="117" width="675" height="655" key="StructurePopup" timestamp="1633934058983">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="534" y="117" width="675" height="655" key="StructurePopup/0.0.1600.852@0.0.1600.852" timestamp="1633934058983" />
+    <state x="779" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1634014811050">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="779" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1600.852@0.0.1600.852" timestamp="1634014811050" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
