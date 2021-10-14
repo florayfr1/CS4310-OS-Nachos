@@ -2,10 +2,8 @@ package nachos.threads;
 
 import nachos.machine.*;
 
-import java.util.LinkedList;
-import java.util.TreeSet;
-import java.util.HashSet;
-import java.util.Iterator;
+import java.sql.SQLOutput;
+import java.util.*;
 
 /**
  * A scheduler that chooses threads based on their priorities.
@@ -129,6 +127,8 @@ public class PriorityScheduler extends Scheduler {
      * A <tt>ThreadQueue</tt> that sorts threads by priority.
      */
     protected class PriorityQueue extends ThreadQueue {
+
+
         PriorityQueue(boolean transferPriority) {
             this.transferPriority = transferPriority;
         }
@@ -141,25 +141,22 @@ public class PriorityScheduler extends Scheduler {
         }
 
         public void acquire(KThread thread) {
-
             Lib.assertTrue(Machine.interrupt().disabled());
             getThreadState(thread).acquire(this);
-
-            //thread is now holding the resources
-            threadWithResources = thread;
         }
 
         public KThread nextThread() {
             Lib.assertTrue(Machine.interrupt().disabled());
-            // implement me
-            //TODO
+            // ):<
             ThreadState threadState = pickNextThread();
             if ( threadState == null ) {
                 return null;
             }
-
-            //queue.remove(threadState.thread);
-            return threadState.thread;
+            else {
+                threadState.acquire(this);
+                threadWithResources = threadState.thread;
+                return threadWithResources;
+            }
         }
 
         /**
@@ -170,21 +167,21 @@ public class PriorityScheduler extends Scheduler {
          * return.
          */
         protected ThreadState pickNextThread() {
-            //if (queue.isEmpty() ) {
-            //    return null;
-            //}
+            if (queue.isEmpty() ) {
+                return null;
+            }
+
+            KThread nextThread = queue.poll();
+            return getThreadState(nextThread);
 
             //TODO save who call this method
 
             //TODO pick next Thread
-
-            // implement me
-            return null;
         }
 
         public void print() {
             Lib.assertTrue(Machine.interrupt().disabled());
-            // implement me (if you want)
+            System.out.println("hello world");
         }
 
         /**
@@ -194,10 +191,19 @@ public class PriorityScheduler extends Scheduler {
         public boolean transferPriority;
 
         //queue that holds all the thread (id)
-        //TODO changed
-        public PriorityQueue queue;
+        public java.util.PriorityQueue<KThread> queue = new java.util.PriorityQueue<KThread>(new Comparator<KThread>() {
+            public int compare(KThread t1, KThread t2) {
+                if (getThreadState(t1).effectivePriority < getThreadState(t2).effectivePriority) {
+                    return -1;
+                }
+                if (getThreadState(t1).effectivePriority == getThreadState(t2).effectivePriority) {
+                    return 0;
+                }
+                return 1;
+            }
+        });
 
-        //TODO know which thread is holding the resources
+        //know which thread is holding the resources
         public KThread threadWithResources;
     }
 
@@ -340,8 +346,8 @@ public class PriorityScheduler extends Scheduler {
          */
         protected int priority;
 
-        //variable save pervious conputede priority
-        protected int savedPriority;
+        //variable save previous computed priority
+        protected int effectivePriority;
 
         //boolean for need of recalculation
         protected boolean recalculate;
