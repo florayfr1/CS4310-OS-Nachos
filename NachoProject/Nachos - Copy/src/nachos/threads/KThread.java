@@ -43,9 +43,9 @@ public class KThread {
      * create an idle thread as well.
      */
     public KThread() {
-    	lock = new Lock();
-    	cond = new Condition2(lock);
-    	joinQueue = ThreadedKernel.scheduler.newThreadQueue(false);
+        lock = new Lock();
+        cond = new Condition2(lock);
+        joinQueue = ThreadedKernel.scheduler.newThreadQueue(false);
 
         if (currentThread != null) {
             tcb = new TCB();
@@ -65,7 +65,7 @@ public class KThread {
     /**
      * Allocate a new KThread.
      *
-     * @param    target    the object whose <tt>run</tt> method is called.
+     * @param target the object whose <tt>run</tt> method is called.
      */
     public KThread(Runnable target) {
         this();
@@ -75,7 +75,7 @@ public class KThread {
     /**
      * Set the target of this thread.
      *
-     * @param    target    the object whose <tt>run</tt> method is called.
+     * @param target the object whose <tt>run</tt> method is called.
      * @return this thread.
      */
     public KThread setTarget(Runnable target) {
@@ -89,7 +89,7 @@ public class KThread {
      * Set the name of this thread. This name is used for debugging purposes
      * only.
      *
-     * @param    name    the name to give to this thread.
+     * @param name the name to give to this thread.
      * @return this thread.
      */
     public KThread setName(String name) {
@@ -188,23 +188,28 @@ public class KThread {
         Lib.debug(dbgThread, "Finishing thread: " + currentThread.toString());
 
         Machine.interrupt().disable();
-
-        //TODO waitQueue must be empty
-        currentThread.joinQueue.acquire(currentThread);
-
         Machine.autoGrader().finishingCurrentThread();
 
         Lib.assertTrue(toBeDestroyed == null);
         toBeDestroyed = currentThread;
 
         //currentThread = callee
-        currentThread().lock.acquire();
-        currentThread().cond.wakeAll(); //currentThread has to be the owner
-        currentThread().lock.release();
-
+        //currentThread().lock.acquire();
+        //currentThread().cond.wakeAll(); //currentThread has to be the owner
+        //currentThread().lock.release();
+        KThread targetThread = currentThread.joinQueue.nextThread();
+        while (targetThread != null) {
+            targetThread.ready();
+            currentThread.joinQueue.acquire(targetThread);
+            targetThread = currentThread.joinQueue.nextThread();
+        }
 
         currentThread.status = statusFinished;
         sleep();
+    }
+
+    public ThreadQueue getJoinQueue() {
+        return joinQueue;
     }
 
     /**
@@ -289,20 +294,22 @@ public class KThread {
         //not current thread
         Lib.assertTrue(this != currentThread);
 
-        if(this.status == statusFinished){
+        if (this.status == statusFinished) {
             return;
         }
 
         lock.acquire();
-		if(this.status != statusFinished){
+        if (this.status != statusFinished) {
             boolean intStatus = Machine.interrupt().disable();
 
-			joinQueue.acquire(this);
-			joinQueue.waitForAccess(currentThread);
+            joinQueue.acquire(this);
+            joinQueue.waitForAccess(currentThread);
+
             cond.sleep();
+
             Machine.interrupt().restore(intStatus);
-		}
-		lock.release();
+        }
+        lock.release();
 
     }
 
@@ -358,9 +365,9 @@ public class KThread {
      * changed from running to blocked or ready (depending on whether the
      * thread is sleeping or yielding).
      *
-     * @param    finishing    <tt>true</tt> if the current thread is
-     * finished, and should be destroyed by the new
-     * thread.
+     * @param finishing <tt>true</tt> if the current thread is
+     *                  finished, and should be destroyed by the new
+     *                  thread.
      */
     private void run() {
         Lib.assertTrue(Machine.interrupt().disabled());
@@ -441,7 +448,7 @@ public class KThread {
     /**
      * Additional state used by schedulers.
      *
-     * @see    nachos.threads.PriorityScheduler.ThreadState
+     * @see nachos.threads.PriorityScheduler.ThreadState
      */
     public Object schedulingState = null;
 
