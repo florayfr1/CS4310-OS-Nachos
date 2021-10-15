@@ -138,6 +138,7 @@ public class PriorityScheduler extends Scheduler {
         public void waitForAccess(KThread thread) {
             Lib.assertTrue(Machine.interrupt().disabled());
             getThreadState(thread).waitForAccess(this);
+
         }
 
         public void acquire(KThread thread) {
@@ -305,10 +306,10 @@ public class PriorityScheduler extends Scheduler {
 
 
             //TODO CHECK ON THIS, ADDING THREAD ?
-            //waitQueue.queue.add(thread);
+
             //queue inside the queue, we are adding the thread
 
-            //waitQueue.queue.add(thread);
+            waitQueue.queue.add(thread);
 
             // Effective priority of whole queue should be recalculated.
 
