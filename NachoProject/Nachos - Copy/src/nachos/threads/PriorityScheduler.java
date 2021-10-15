@@ -2,7 +2,7 @@ package nachos.threads;
 
 import nachos.machine.*;
 
-import java.sql.SQLOutput;
+
 import java.util.*;
 
 /**
@@ -154,6 +154,10 @@ public class PriorityScheduler extends Scheduler {
                 return null;
             }
 
+            //KThread kthread = queue.poll();
+            //return kthread;
+
+
             threadState.acquire(this);
             threadWithResources = threadState.thread;
             queue.remove(threadWithResources);
@@ -190,13 +194,13 @@ public class PriorityScheduler extends Scheduler {
          */
         public boolean transferPriority;
 
-        //queue that holds all the thread (id)
+        //queue that holds all the thread
         public java.util.PriorityQueue<KThread> queue = new java.util.PriorityQueue<KThread>(new Comparator<KThread>() {
             public int compare(KThread t1, KThread t2) {
-                if (getThreadState(t1).effectivePriority < getThreadState(t2).effectivePriority) {
+                if (getThreadState(t1).getPriority() < getThreadState(t2).getPriority()) {
                     return -1;
                 }
-                if (getThreadState(t1).effectivePriority == getThreadState(t2).effectivePriority) {
+                if (getThreadState(t1).getPriority() == getThreadState(t2).getPriority()) {
                     return 0;
                 }
                 return 1;
@@ -227,7 +231,7 @@ public class PriorityScheduler extends Scheduler {
             recalculate = false;
 
             //remember the queue from acquire and waitforacess
-            wantQueue = new java.util.PriorityQueue<PriorityQueue>(new Comparator<PriorityQueue>() {
+            wantQueue = new java.util.PriorityQueue<PriorityQueue>(200,new Comparator<PriorityQueue>() {
                 public int compare(PriorityQueue p1, PriorityQueue p2) {
                     if (p1.pickNextThread().getEffectivePriority() < p2.pickNextThread().getEffectivePriority()) {
                         return -1;
@@ -343,8 +347,12 @@ public class PriorityScheduler extends Scheduler {
          */
         public void acquire(PriorityQueue waitQueue) {
             // implement me
+            Lib.assertTrue(Machine.interrupt().disabled());
+
             //TODO waitQueue from parameter now becomes one of resources on which this thread waits
-            wantQueue.add(waitQueue); //own the queue = own the lock
+
+            //ERROR
+            //wantQueue.add(waitQueue); //own the queue = own the lock
 
             // TODO Effective priority of whole queue should be recalculated.
             recalculate = true;
