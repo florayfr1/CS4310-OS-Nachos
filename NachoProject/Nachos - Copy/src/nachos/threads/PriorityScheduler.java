@@ -176,9 +176,7 @@ public class PriorityScheduler extends Scheduler {
             KThread nextThread = queue.peek();
             return getThreadState(nextThread);
 
-            //TODO save who call this method
-
-            //TODO pick next Thread
+            //save who calls this method
         }
 
         public void print() {
@@ -226,7 +224,20 @@ public class PriorityScheduler extends Scheduler {
         public ThreadState(KThread thread) {
             this.thread = thread;
 
-            //TODO initialize (implement comparable)
+            recalculate = false;
+
+            //remember the queue from acquire and waitforacess
+            wantQueue = new java.util.PriorityQueue<PriorityQueue>(new Comparator<PriorityQueue>() {
+                public int compare(PriorityQueue p1, PriorityQueue p2) {
+                    if (p1.pickNextThread().getEffectivePriority() < p2.pickNextThread().getEffectivePriority()) {
+                        return -1;
+                    }
+                    if (p1.pickNextThread().getEffectivePriority() == p2.pickNextThread().getEffectivePriority()) {
+                        return 0;
+                    }
+                    return 1;
+                }
+            }); //resources that we're waiting on/want
 
             setPriority(priorityDefault);
         }
@@ -249,6 +260,11 @@ public class PriorityScheduler extends Scheduler {
 
             // implement me
             //TODO calculate effective priority with donated priority; save it
+            effectivePriority = this.priority;
+
+            //TODO make a copy of priority queue and loop through it
+            // https://stackoverflow.com/questions/26281350/copy-of-a-priorityqueue-without-interfere-with-the-original-priorityqueue
+            // https://stackoverflow.com/questions/8129122/how-to-iterate-over-a-priorityqueue
 
             // Only recalculate effective priority if required.
 
@@ -304,7 +320,7 @@ public class PriorityScheduler extends Scheduler {
             //TODO waitQueue is the resources this thread is waiting
             //TODO  remember which thread came sooner
 
-
+            Lib.assertTrue(Machine.interrupt().disabled());
             //TODO CHECK ON THIS, ADDING THREAD ?
 
             //queue inside the queue, we are adding the thread
@@ -328,11 +344,10 @@ public class PriorityScheduler extends Scheduler {
         public void acquire(PriorityQueue waitQueue) {
             // implement me
             //TODO waitQueue from parameter now becomes one of resources on which this thread waits
-            //ownedQueue.add(waitQueue);
+            wantQueue.add(waitQueue); //own the queue = own the lock
 
             // TODO Effective priority of whole queue should be recalculated.
             recalculate = true;
-            //wantQueue.recalcPriority();
         }
 
         //TODO class note: circle/square one incoming many outcoming
@@ -353,8 +368,8 @@ public class PriorityScheduler extends Scheduler {
         protected boolean recalculate;
 
         //TODO remember the queue from acquire and waitforacess
-        protected LinkedList<PriorityQueue> wantQueue; //resources that we're waiting on/want
-        protected KThread ownedQueue; //resources that we have
+        protected java.util.PriorityQueue<PriorityQueue> wantQueue; //resources that we're waiting on/want
+        protected KThread resourceHave; //resources that we have
 
         //TODO remember which thread came first
 
