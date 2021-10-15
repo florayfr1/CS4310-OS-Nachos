@@ -194,15 +194,15 @@ public class KThread {
         toBeDestroyed = currentThread;
 
         //currentThread = callee
-        //currentThread().lock.acquire();
-        //currentThread().cond.wakeAll(); //currentThread has to be the owner
-        //currentThread().lock.release();
-        KThread targetThread = currentThread.joinQueue.nextThread();
+        currentThread().lock.acquire();
+        currentThread().cond.wakeAll(); //currentThread has to be the owner
+        currentThread().lock.release();
+        /*KThread targetThread = currentThread.joinQueue.nextThread();
         while (targetThread != null) {
             targetThread.ready();
             currentThread.joinQueue.acquire(targetThread);
             targetThread = currentThread.joinQueue.nextThread();
-        }
+        }*/
 
         currentThread.status = statusFinished;
         sleep();
