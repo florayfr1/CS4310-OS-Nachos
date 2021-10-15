@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/proj1/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/proj1/nachos.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nachos.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +31,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader6_PriorityDonation">
+  <component name="RunManager" selected="Application.ThreadGrader2_Communicator">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -145,22 +145,22 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1634336770811" />
-    <state width="1544" height="193" key="GridCell.Tab.0.bottom" timestamp="1634336862686">
+    <state width="726" height="94" key="GridCell.Tab.0.bottom" timestamp="1634337401504">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="193" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
-    <state width="1544" height="193" key="GridCell.Tab.0.center" timestamp="1634336862686">
+    <state width="726" height="94" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634337401504" />
+    <state width="726" height="94" key="GridCell.Tab.0.center" timestamp="1634337401503">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="193" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
-    <state width="1544" height="193" key="GridCell.Tab.0.left" timestamp="1634336862686">
+    <state width="726" height="94" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634337401503" />
+    <state width="726" height="94" key="GridCell.Tab.0.left" timestamp="1634337401503">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="193" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
-    <state width="1544" height="193" key="GridCell.Tab.0.right" timestamp="1634336862686">
+    <state width="726" height="94" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634337401503" />
+    <state width="726" height="94" key="GridCell.Tab.0.right" timestamp="1634337401504">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="193" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
+    <state width="726" height="94" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634337401504" />
     <state width="1544" height="290" key="GridCell.Tab.1.bottom" timestamp="1634259810412">
       <screen x="0" y="0" width="1600" height="852" />
     </state>

@@ -46,15 +46,17 @@ public class Communicator {
     public void speak(int word) {
         lock.acquire();
 
-        if (!listenerMessageList.isEmpty()){
-            Message mListener = listenerMessageList.poll();
-            mListener.setWord(word);
-            mListener.cond.wake();
+        Message m;
+        if (listenerMessageList.isEmpty()){
+            m= new Message(word);
+            speakerMessageList.add(m);
+            m.cond.sleep();
         } else {
-            Message mSpeaker = new Message(word);
-            speakerMessageList.add(mSpeaker);
-            mSpeaker.cond.sleep();
+            m = listenerMessageList.poll();
+            m.cond.wake();
         }
+        m.setWord(word);
+
         lock.release();
     }
 
@@ -68,18 +70,19 @@ public class Communicator {
     public int listen() {
         lock.acquire();
 
-        int word = 0;
+        int word;
 
-        if(!speakerMessageList.isEmpty()){
-            Message mSpeaker = speakerMessageList.poll();
-            word = mSpeaker.word;
-            mSpeaker.cond.wake();
+        Message m;
+
+        if(speakerMessageList.isEmpty()){
+            m = new Message();
+            listenerMessageList.add(m);
+            m.cond.sleep();
         } else {
-            Message mListener = new Message();
-            listenerMessageList.add(mListener);
-            mListener.cond.sleep();
-            word = mListener.word;
+            m = speakerMessageList.poll();
+            m.cond.wake();
         }
+        word = m.word;
 
         lock.release();
         return word;
