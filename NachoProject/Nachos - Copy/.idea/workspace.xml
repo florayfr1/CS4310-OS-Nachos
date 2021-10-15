@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/proj1/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/proj1/nachos.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,14 +24,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/nachos/proj1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader5_PriorityScheduler_noDonation">
+  <component name="RunManager" selected="Application.ThreadGrader6_PriorityDonation">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -48,7 +49,6 @@
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
       <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader1" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -57,7 +57,6 @@
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
       <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader2" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -66,7 +65,6 @@
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
       <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader3" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,7 +73,6 @@
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
       <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader4" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -84,7 +81,6 @@
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
       <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader5" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,7 +89,6 @@
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
       <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader6" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj1" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,10 +117,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634331860072">
+    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634336817822">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1634331860072" />
+    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1634336817822" />
     <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1633218886199">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -146,26 +141,26 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.852@0.0.1600.852" timestamp="1633222853915" />
-    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1633932802392">
+    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1634336770811">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633932802392" />
-    <state width="1544" height="297" key="GridCell.Tab.0.bottom" timestamp="1634335978731">
+    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1634336770811" />
+    <state width="1544" height="193" key="GridCell.Tab.0.bottom" timestamp="1634336862686">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="297" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634335978731" />
-    <state width="1544" height="297" key="GridCell.Tab.0.center" timestamp="1634335978731">
+    <state width="1544" height="193" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
+    <state width="1544" height="193" key="GridCell.Tab.0.center" timestamp="1634336862686">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="297" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634335978731" />
-    <state width="1544" height="297" key="GridCell.Tab.0.left" timestamp="1634335978731">
+    <state width="1544" height="193" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
+    <state width="1544" height="193" key="GridCell.Tab.0.left" timestamp="1634336862686">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="297" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634335978731" />
-    <state width="1544" height="297" key="GridCell.Tab.0.right" timestamp="1634335978731">
+    <state width="1544" height="193" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
+    <state width="1544" height="193" key="GridCell.Tab.0.right" timestamp="1634336862686">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="297" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634335978731" />
+    <state width="1544" height="193" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634336862686" />
     <state width="1544" height="290" key="GridCell.Tab.1.bottom" timestamp="1634259810412">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
