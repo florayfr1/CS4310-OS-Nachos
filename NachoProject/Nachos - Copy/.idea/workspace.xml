@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/proj1/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/proj1/nachos.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,13 +102,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Machine" />
-      <item itemvalue="Application.ThreadGrader1_Condition2" />
-      <item itemvalue="Application.ThreadGrader2_Communicator" />
-      <item itemvalue="Application.ThreadGrader3_Join" />
-      <item itemvalue="Application.ThreadGrader4_WaitUntil" />
       <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
       <item itemvalue="Application.ThreadGrader6_PriorityDonation" />
+      <item itemvalue="Application.ThreadGrader1_Condition2" />
+      <item itemvalue="Application.ThreadGrader3_Join" />
+      <item itemvalue="Application.ThreadGrader4_WaitUntil" />
+      <item itemvalue="Application.ThreadGrader2_Communicator" />
+      <item itemvalue="Application.Machine" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -154,22 +153,22 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1633932802392" />
-    <state width="1544" height="99" key="GridCell.Tab.0.bottom" timestamp="1634241797975">
+    <state width="1544" height="49" key="GridCell.Tab.0.bottom" timestamp="1634258133537">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="99" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
-    <state width="1544" height="99" key="GridCell.Tab.0.center" timestamp="1634241797975">
+    <state width="1544" height="49" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634258133537" />
+    <state width="1544" height="49" key="GridCell.Tab.0.center" timestamp="1634258133537">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="99" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
-    <state width="1544" height="99" key="GridCell.Tab.0.left" timestamp="1634241797975">
+    <state width="1544" height="49" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634258133537" />
+    <state width="1544" height="49" key="GridCell.Tab.0.left" timestamp="1634258133537">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="99" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
-    <state width="1544" height="99" key="GridCell.Tab.0.right" timestamp="1634241797975">
+    <state width="1544" height="49" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634258133537" />
+    <state width="1544" height="49" key="GridCell.Tab.0.right" timestamp="1634258133537">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="99" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634241797975" />
+    <state width="1544" height="49" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634258133537" />
     <state width="1544" height="218" key="GridCell.Tab.1.bottom" timestamp="1633852400785">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
