@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader$ThreadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader$ThreadHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nachos.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/Communicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/ag/BasicTestGrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/ag/BasicTestGrader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +25,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1xK2KLHoh0smeeoZ8LkfdOkjHo4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -31,7 +49,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader2_Communicator">
+  <component name="RunManager" selected="Application.ThreadGrader5_PriorityScheduler_noDonation">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -103,6 +121,7 @@
       <item itemvalue="Application.Machine" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -116,94 +135,10 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1634336817822">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="243" y="34" width="1102" height="812" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1634336817822" />
-    <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1633218886199">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="354" y="39" key="#com.intellij.ide.macro.MacrosDialog/0.0.1600.852@0.0.1600.852" timestamp="1633218886199" />
-    <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1633985599178">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="957" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1600.852@0.0.1600.852" timestamp="1633985599178" />
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1633932782440">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1633932782440" />
-    <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1633392511601">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="476" y="145" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.852@0.0.1600.852" timestamp="1633392511601" />
-    <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1633222853915">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="548" y="285" width="503" height="294" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1600.852@0.0.1600.852" timestamp="1633222853915" />
-    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1634336770811">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1634336770811" />
-    <state width="726" height="94" key="GridCell.Tab.0.bottom" timestamp="1634337401504">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="94" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634337401504" />
-    <state width="726" height="94" key="GridCell.Tab.0.center" timestamp="1634337401503">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="94" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634337401503" />
-    <state width="726" height="94" key="GridCell.Tab.0.left" timestamp="1634337401503">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="94" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634337401503" />
-    <state width="726" height="94" key="GridCell.Tab.0.right" timestamp="1634337401504">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="94" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634337401504" />
-    <state width="1544" height="290" key="GridCell.Tab.1.bottom" timestamp="1634259810412">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="290" key="GridCell.Tab.1.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634259810412" />
-    <state width="1544" height="290" key="GridCell.Tab.1.center" timestamp="1634259810412">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="290" key="GridCell.Tab.1.center/0.0.1600.852@0.0.1600.852" timestamp="1634259810412" />
-    <state width="1544" height="290" key="GridCell.Tab.1.left" timestamp="1634259810412">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="290" key="GridCell.Tab.1.left/0.0.1600.852@0.0.1600.852" timestamp="1634259810412" />
-    <state width="1544" height="290" key="GridCell.Tab.1.right" timestamp="1634259810412">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="290" key="GridCell.Tab.1.right/0.0.1600.852@0.0.1600.852" timestamp="1634259810412" />
-    <state x="673" y="65" key="RollbackChangesDialog" timestamp="1633852160735">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="673" y="65" key="RollbackChangesDialog/0.0.1600.852@0.0.1600.852" timestamp="1633852160735" />
-    <state x="69" y="0" key="SettingsEditor" timestamp="1633977693918">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="69" y="0" key="SettingsEditor/0.0.1600.852@0.0.1600.852" timestamp="1633977693918" />
-    <state x="534" y="117" width="675" height="655" key="StructurePopup" timestamp="1633934058983">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="534" y="117" width="675" height="655" key="StructurePopup/0.0.1600.852@0.0.1600.852" timestamp="1633934058983" />
-    <state x="779" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1634014811050">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="779" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1600.852@0.0.1600.852" timestamp="1634014811050" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/nachos/ag/BasicTestGrader.java</url>
-          <line>71</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="lock.lockHolder.tcb" />

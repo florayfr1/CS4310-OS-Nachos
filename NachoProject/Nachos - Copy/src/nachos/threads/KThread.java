@@ -195,14 +195,14 @@ public class KThread {
 
         //currentThread = callee
         currentThread().lock.acquire();
+        KThread thread = currentThread.joinQueue.nextThread();
+        while(thread != null){
+            currentThread.joinQueue.acquire(thread);
+            thread = currentThread.joinQueue.nextThread();
+        }
         currentThread().cond.wakeAll(); //currentThread has to be the owner
+        currentThread.joinQueue = null;
         currentThread().lock.release();
-        /*KThread targetThread = currentThread.joinQueue.nextThread();
-        while (targetThread != null) {
-            targetThread.ready();
-            currentThread.joinQueue.acquire(targetThread);
-            targetThread = currentThread.joinQueue.nextThread();
-        }*/
 
         currentThread.status = statusFinished;
         sleep();
@@ -288,7 +288,7 @@ public class KThread {
      * thread.
      */
     public void join() {
-        //currentTHread = callee
+        //currentThread = callee
         Lib.debug(dbgThread, "Joining to thread: " + toString());
 
         //not current thread
@@ -302,12 +302,10 @@ public class KThread {
         if (this.status != statusFinished) {
             boolean intStatus = Machine.interrupt().disable();
 
-            joinQueue.acquire(this);
             joinQueue.waitForAccess(currentThread);
-
+            Machine.interrupt().restore(intStatus);
             cond.sleep();
 
-            Machine.interrupt().restore(intStatus);
         }
         lock.release();
 
