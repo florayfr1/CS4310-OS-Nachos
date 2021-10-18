@@ -112,7 +112,7 @@
       <item itemvalue="Application.Machine" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -125,28 +125,6 @@
       <updated>1630089393964</updated>
     </task>
     <servers />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="726" height="118" key="GridCell.Tab.0.bottom" timestamp="1634517261938">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="118" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634517261938" />
-    <state width="726" height="118" key="GridCell.Tab.0.center" timestamp="1634517261937">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="118" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634517261937" />
-    <state width="726" height="118" key="GridCell.Tab.0.left" timestamp="1634517261937">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="118" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634517261937" />
-    <state width="726" height="118" key="GridCell.Tab.0.right" timestamp="1634517261937">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="726" height="118" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634517261937" />
-    <state x="0" y="0" width="800" height="852" key="dock-window-1" timestamp="1634515924530">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="0" y="0" width="800" height="852" key="dock-window-1/0.0.1600.852@0.0.1600.852" timestamp="1634515924530" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
