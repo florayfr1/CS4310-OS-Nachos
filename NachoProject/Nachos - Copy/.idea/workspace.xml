@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader$ThreadHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader$ThreadHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/ag/BasicTestGrader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread$PingTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/KThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nachos.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/ag/BasicTestGrader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/ag/BasicTestGrader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/KThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/KThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +40,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader5_PriorityScheduler_noDonation">
+  <component name="RunManager" selected="Application.ThreadGrader6_PriorityDonation">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -121,7 +112,7 @@
       <item itemvalue="Application.Machine" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -135,8 +126,27 @@
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="oldMeFiltersMigrated" value="true" />
+  <component name="WindowStateProjectService">
+    <state width="726" height="118" key="GridCell.Tab.0.bottom" timestamp="1634517261938">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="118" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1634517261938" />
+    <state width="726" height="118" key="GridCell.Tab.0.center" timestamp="1634517261937">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="118" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1634517261937" />
+    <state width="726" height="118" key="GridCell.Tab.0.left" timestamp="1634517261937">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="118" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1634517261937" />
+    <state width="726" height="118" key="GridCell.Tab.0.right" timestamp="1634517261937">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="726" height="118" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1634517261937" />
+    <state x="0" y="0" width="800" height="852" key="dock-window-1" timestamp="1634515924530">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="0" y="0" width="800" height="852" key="dock-window-1/0.0.1600.852@0.0.1600.852" timestamp="1634515924530" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
