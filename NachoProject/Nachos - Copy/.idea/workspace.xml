@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$PriorityQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/proj2/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/proj2/nachos.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler$ThreadState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/threads/PriorityScheduler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/threads/PriorityScheduler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/machine/OpenFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/machine/OpenFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/proj2/nachos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/proj2/nachos.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,14 +35,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/nachos/proj2" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="settings.editor.splitter.proportion" value="0.2166392" />
   </component>
-  <component name="RunManager" selected="Application.ThreadGrader6_PriorityDonation">
+  <component name="RunManager" selected="Application.Project2">
     <configuration name="Machine" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
@@ -50,6 +52,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Project2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
+      <module name="Nachos" />
+      <option name="PROGRAM_PARAMETERS" value="-x cat.coff" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj2" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -94,25 +105,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadGrader6_PriorityDonation" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
-      <module name="Nachos" />
-      <option name="PROGRAM_PARAMETERS" value=" -- nachos.ag.ThreadGrader6" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
-      <item itemvalue="Application.ThreadGrader6_PriorityDonation" />
+      <item itemvalue="Application.Machine" />
+      <item itemvalue="Application.Project2" />
       <item itemvalue="Application.ThreadGrader1_Condition2" />
+      <item itemvalue="Application.ThreadGrader2_Communicator" />
       <item itemvalue="Application.ThreadGrader3_Join" />
       <item itemvalue="Application.ThreadGrader4_WaitUntil" />
-      <item itemvalue="Application.ThreadGrader2_Communicator" />
-      <item itemvalue="Application.Machine" />
+      <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -125,6 +128,40 @@
       <updated>1630089393964</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637351490434">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1637351490434" />
+    <state x="503" y="206" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636844731440">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="503" y="206" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.852@0.0.1600.852" timestamp="1636844731440" />
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1636844789990">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1636844789990" />
+    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1636844797992">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1636844797992" />
+    <state width="1544" height="159" key="GridCell.Tab.0.bottom" timestamp="1637351720256">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="159" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
+    <state width="1544" height="159" key="GridCell.Tab.0.center" timestamp="1637351720256">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="159" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
+    <state width="1544" height="159" key="GridCell.Tab.0.left" timestamp="1637351720256">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="159" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
+    <state width="1544" height="159" key="GridCell.Tab.0.right" timestamp="1637351720256">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="159" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
