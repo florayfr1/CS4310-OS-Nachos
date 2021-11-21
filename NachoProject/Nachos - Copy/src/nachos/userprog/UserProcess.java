@@ -15,8 +15,8 @@ import java.io.EOFException;
  * This class is extended by other classes to support additional functionality
  * (such as additional syscalls).
  *
- * @see    nachos.vm.VMProcess
- * @see    nachos.network.NetProcess
+ * @see nachos.vm.VMProcess
+ * @see nachos.network.NetProcess
  */
 public class UserProcess {
     /**
@@ -24,9 +24,11 @@ public class UserProcess {
      */
 
     public UserProcess() {
-        fileDescriptor = new OpenFile[16];
+        fileDescriptorTable = new OpenFile[16];
 
         //0 and 1 is reserve to console
+        fileDescriptorTable[0] = UserKernel.console.openForReading();
+        fileDescriptorTable[1] = UserKernel.console.openForWriting();
 
         int numPhysPages = Machine.processor().getNumPhysPages();
         pageTable = new TranslationEntry[numPhysPages];
@@ -49,9 +51,9 @@ public class UserProcess {
      * Execute the specified program with the specified arguments. Attempts to
      * load the program, and then forks a thread to run it.
      *
-     * @param    name    the name of the file containing the executable.
-     * @param    args    the arguments to pass to the executable.
-     * @return    <tt>true</tt> if the program was successfully executed.
+     * @param name the name of the file containing the executable.
+     * @param args the arguments to pass to the executable.
+     * @return <tt>true</tt> if the program was successfully executed.
      */
     public boolean execute(String name, String[] args) {
         if (!load(name, args))
@@ -84,10 +86,10 @@ public class UserProcess {
      * without including the null terminator. If no null terminator is found,
      * returns <tt>null</tt>.
      *
-     * @param    vaddr    the starting virtual address of the null-terminated
-     * string.
-     * @param    maxLength    the maximum number of characters in the string,
-     * not including the null terminator.
+     * @param vaddr     the starting virtual address of the null-terminated
+     *                  string.
+     * @param maxLength the maximum number of characters in the string,
+     *                  not including the null terminator.
      * @return the string read, or <tt>null</tt> if no null terminator was
      * found.
      */
@@ -110,8 +112,8 @@ public class UserProcess {
      * Transfer data from this process's virtual memory to all of the specified
      * array. Same as <tt>readVirtualMemory(vaddr, data, 0, data.length)</tt>.
      *
-     * @param    vaddr    the first byte of virtual memory to read.
-     * @param    data    the array where the data will be stored.
+     * @param vaddr the first byte of virtual memory to read.
+     * @param data  the array where the data will be stored.
      * @return the number of bytes successfully transferred.
      */
     public int readVirtualMemory(int vaddr, byte[] data) {
@@ -125,11 +127,11 @@ public class UserProcess {
      * should return the number of bytes successfully copied (or zero if no
      * data could be copied).
      *
-     * @param    vaddr    the first byte of virtual memory to read.
-     * @param    data    the array where the data will be stored.
-     * @param    offset    the first byte to write in the array.
-     * @param    length    the number of bytes to transfer from virtual memory to
-     * the array.
+     * @param vaddr  the first byte of virtual memory to read.
+     * @param data   the array where the data will be stored.
+     * @param offset the first byte to write in the array.
+     * @param length the number of bytes to transfer from virtual memory to
+     *               the array.
      * @return the number of bytes successfully transferred.
      */
     public int readVirtualMemory(int vaddr, byte[] data, int offset,
@@ -153,8 +155,8 @@ public class UserProcess {
      * memory.
      * Same as <tt>writeVirtualMemory(vaddr, data, 0, data.length)</tt>.
      *
-     * @param    vaddr    the first byte of virtual memory to write.
-     * @param    data    the array containing the data to transfer.
+     * @param vaddr the first byte of virtual memory to write.
+     * @param data  the array containing the data to transfer.
      * @return the number of bytes successfully transferred.
      */
     public int writeVirtualMemory(int vaddr, byte[] data) {
@@ -168,11 +170,11 @@ public class UserProcess {
      * should return the number of bytes successfully copied (or zero if no
      * data could be copied).
      *
-     * @param    vaddr    the first byte of virtual memory to write.
-     * @param    data    the array containing the data to transfer.
-     * @param    offset    the first byte to transfer from the array.
-     * @param    length    the number of bytes to transfer from the array to
-     * virtual memory.
+     * @param vaddr  the first byte of virtual memory to write.
+     * @param data   the array containing the data to transfer.
+     * @param offset the first byte to transfer from the array.
+     * @param length the number of bytes to transfer from the array to
+     *               virtual memory.
      * @return the number of bytes successfully transferred.
      */
     public int writeVirtualMemory(int vaddr, byte[] data, int offset,
@@ -197,9 +199,9 @@ public class UserProcess {
      * its header information, and copies sections and arguments into this
      * process's virtual memory.
      *
-     * @param    name    the name of the file containing the executable.
-     * @param    args    the arguments to pass to the executable.
-     * @return    <tt>true</tt> if the executable was successfully loaded.
+     * @param name the name of the file containing the executable.
+     * @param args the arguments to pass to the executable.
+     * @return <tt>true</tt> if the executable was successfully loaded.
      */
     private boolean load(String name, String[] args) {
         Lib.debug(dbgProcess, "UserProcess.load(\"" + name + "\")");
@@ -283,7 +285,7 @@ public class UserProcess {
      * memory. If this returns successfully, the process will definitely be
      * run (this is the last step in process initialization that can fail).
      *
-     * @return    <tt>true</tt> if the sections were successfully loaded.
+     * @return <tt>true</tt> if the sections were successfully loaded.
      */
     protected boolean loadSections() {
         if (numPages > Machine.processor().getNumPhysPages()) {
@@ -384,21 +386,46 @@ public class UserProcess {
      * <tr><td>9</td><td><tt>int  unlink(char *name);</tt></td></tr>
      * </table>
      *
-     * @param    syscall    the syscall number.
-     * @param    a0    the first syscall argument.
-     * @param    a1    the second syscall argument.
-     * @param    a2    the third syscall argument.
-     * @param    a3    the fourth syscall argument.
+     * @param syscall the syscall number.
+     * @param a0      the first syscall argument.
+     * @param a1      the second syscall argument.
+     * @param a2      the third syscall argument.
+     * @param a3      the fourth syscall argument.
      * @return the value to be returned to the user.
      */
     public int handleSyscall(int syscall, int a0, int a1, int a2, int a3) {
-            switch (syscall) {
+        //resource: https://www.doc.ic.ac.uk/lab/secondyear/spim/node8.html
+        switch (syscall) {
             case syscallHalt:
                 return handleHalt();
-            //creat
+
+            //a0 = status
+            case syscallExit:
+                return handleExit(a0);
+
+            //**a0 = name
+            case syscallCreate:
+                return handleCreate(a0);
+
+            //a0 = name
             case syscallOpen:
                 return handleOpen(a0);
 
+            //a0=file descriptor; a1 = buffer; a2 = count
+            case syscallRead:
+                return handleRead(a0, a1, a2);
+
+            //a0 = fileDescriptor, a1 = buffer, a2 = count
+            case syscallWrite:
+                return handleWrite(a0, a1, a2);
+
+            //a0 = fileDescriptor
+            case syscallClose:
+                return handleClose(a0);
+
+            //a0 = name
+            case syscallUnlink:
+                return handleUnlink(a0);
             default:
                 Lib.debug(dbgProcess, "Unknown syscall " + syscall);
                 Lib.assertNotReached("Unknown system call!");
@@ -406,22 +433,64 @@ public class UserProcess {
         return 0;
     }
 
+    private int handleExit(int status) {
+
+        //Terminate the current process immediately. Any open file descriptors
+        // belonging to the process are closed. Any children of the process no longer
+        // have a parent process.
+        //
+        // status is returned to the parent process as this process's exit status and
+        // can be collected using the join syscall. A process exiting normally should
+        // (but is not required to) set status to 0.
+        //
+        // exit() never returns.
+    }
+
+    private int handleCreate(int name) {
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO exception checking for Create
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        String filename = readVirtualMemoryString(name, 256);
+        int freeindex = -1;
+        for (int i = 2; i < fileDescriptorTable.length; i++) {
+            if (fileDescriptorTable[i] == null) {
+                freeindex = i;
+                break;
+            }
+        }
+        if (freeindex == -1) {
+            return -1; //not found
+        }
+        // public OpenFile open(String name, boolean create);
+        OpenFile currentFile = ThreadedKernel.fileSystem.open(filename, true);
+        fileDescriptorTable[freeindex] = currentFile;
+        return freeindex;
+    }
+
     //int open(char *name);
     //return a file desciptor
     private int handleOpen(int name) {
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO exception checking for Open
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
         String filename = readVirtualMemoryString(name, 256);
         int freeindex = -1;
-        for(int i=0; i<fileDescriptor.length; i++){
-            if(fileDescriptor[i] == null){
+        for (int i = 2; i < fileDescriptorTable.length; i++) {
+            if (fileDescriptorTable[i] == null) {
                 freeindex = i;
+                break;
             }
         }
-        if(freeindex == -1){
+        if (freeindex == -1) {
             return -1; //not found
         }
-        //  public OpenFile open(String name, boolean create);
-        OpenFile currentFile = ThreadedKernel.fileSystem.open(filename, true);
-        fileDescriptor[freeindex] = currentFile;
+        // public OpenFile open(String name, boolean create);
+        OpenFile currentFile = ThreadedKernel.fileSystem.open(filename, false);
+        fileDescriptorTable[freeindex] = currentFile;
         return freeindex;
     }
 
@@ -434,7 +503,7 @@ public class UserProcess {
      * <i>cause</i> argument identifies which exception occurred; see the
      * <tt>Processor.exceptionZZZ</tt> constants.
      *
-     * @param    cause    the user exception that occurred.
+     * @param cause the user exception that occurred.
      */
     public void handleException(int cause) {
         Processor processor = Machine.processor();
@@ -479,7 +548,9 @@ public class UserProcess {
 
     private int initialPC, initialSP;
     private int argc, argv;
-    private OpenFile[] fileDescriptor;
+
     private static final int pageSize = Processor.pageSize;
     private static final char dbgProcess = 'a';
+
+    private OpenFile[] fileDescriptorTable;
 }

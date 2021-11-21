@@ -1,0 +1,40 @@
+cat
+    -write
+    -open
+    -close
+    -exit
+cp
+    -write
+    -open
+    -read
+    -creat
+    -close
+    -exit
+echo
+    -write
+    -exit
+halt
+    -halt
+matmult
+    -write
+    -exit
+mv
+    -write
+    -open
+    -creat
+    -close
+    -unlink
+    -exit
+rm
+    -write
+    -unlink
+    -exit
+sh
+    -write
+    -exit
+    -halt
+    -exec
+    -join
+sort
+    -exit
+    -memory system
