@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/nachos/test/a_readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/machine/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/machine/Processor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/machine/CoffSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/machine/CoffSection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/machine/StubFileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/machine/StubFileSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
     <configuration name="Project2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
-      <option name="PROGRAM_PARAMETERS" value="-x cat.coff" />
+      <option name="PROGRAM_PARAMETERS" value="-x echo.coff" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,10 +130,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637351490434">
+    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637648509239">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1637351490434" />
+    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1637648509239" />
     <state x="503" y="206" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636844731440">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -142,26 +142,34 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1636844789990" />
+    <state x="324" y="231" width="951" height="390" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1637606103164">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="324" y="231" width="951" height="390" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1600.852@0.0.1600.852" timestamp="1637606103164" />
     <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1636844797992">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1636844797992" />
-    <state width="1544" height="159" key="GridCell.Tab.0.bottom" timestamp="1637351720256">
+    <state width="1544" height="274" key="GridCell.Tab.0.bottom" timestamp="1637648591098">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="159" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
-    <state width="1544" height="159" key="GridCell.Tab.0.center" timestamp="1637351720256">
+    <state width="1544" height="274" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
+    <state width="1544" height="274" key="GridCell.Tab.0.center" timestamp="1637648591098">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="159" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
-    <state width="1544" height="159" key="GridCell.Tab.0.left" timestamp="1637351720256">
+    <state width="1544" height="274" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
+    <state width="1544" height="274" key="GridCell.Tab.0.left" timestamp="1637648591098">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="159" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
-    <state width="1544" height="159" key="GridCell.Tab.0.right" timestamp="1637351720256">
+    <state width="1544" height="274" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
+    <state width="1544" height="274" key="GridCell.Tab.0.right" timestamp="1637648591098">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="159" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1637351720256" />
+    <state width="1544" height="274" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
+    <state x="242" y="0" width="768" height="852" key="find.popup" timestamp="1637606162813">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state x="242" y="0" width="768" height="852" key="find.popup/0.0.1600.852@0.0.1600.852" timestamp="1637606162813" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

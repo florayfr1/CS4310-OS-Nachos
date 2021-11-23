@@ -24,7 +24,8 @@ public class UserProcess {
      */
 
     public UserProcess() {
-        fileDescriptorTable = new OpenFile[16];
+        maxPageNum = 18;
+        fileDescriptorTable = new OpenFile[maxPageNum]; //max of 16 + 2 standard in/output
 
         //0 and 1 is reserve to console
         fileDescriptorTable[0] = UserKernel.console.openForReading();
@@ -316,6 +317,12 @@ public class UserProcess {
      * Release any resources allocated by <tt>loadSections()</tt>.
      */
     protected void unloadSections() {
+        for (int i = 0; i < fileDescriptorTable.length; i++) {
+            if (fileDescriptorTable[i] != null) {
+                fileDescriptorTable[i].close();
+            }
+        }
+        coff.close();
     }
 
     /**
@@ -426,6 +433,7 @@ public class UserProcess {
             //a0 = name
             case syscallUnlink:
                 return handleUnlink(a0);
+
             default:
                 Lib.debug(dbgProcess, "Unknown syscall " + syscall);
                 Lib.assertNotReached("Unknown system call!");
@@ -433,17 +441,61 @@ public class UserProcess {
         return 0;
     }
 
+    private int handleUnlink(int name) {
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO exception checking for Unlink
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        String fileName = readVirtualMemoryString(name, 256);
+
+        boolean isRemove = ThreadedKernel.fileSystem.remove(fileName);
+
+        return 0;
+    }
+
+    private int handleWrite(int fileDescriptor, int buffer, int count) {
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO exception checking for Write
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        int numOfByteWrite = -1;
+
+        byte[] bufferByte = new byte[count];
+        int bufferTransfer = readVirtualMemory(buffer, bufferByte, 0, count);
+
+        numOfByteWrite = fileDescriptorTable[fileDescriptor].write(bufferByte,0, bufferTransfer);
+        return numOfByteWrite;
+    }
+
+    private int handleRead(int fileDescriptor, int buffer, int count) {
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO exception checking for Read
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        int numOfByteRead = -1;
+
+        byte[] bufferByte = new byte[count];
+        int byteTransfer = fileDescriptorTable[fileDescriptor].read(bufferByte, 0, count);
+
+        numOfByteRead = writeVirtualMemory(buffer, bufferByte, 0, byteTransfer);
+
+        return numOfByteRead;
+    }
+
     private int handleExit(int status) {
 
-        //Terminate the current process immediately. Any open file descriptors
-        // belonging to the process are closed. Any children of the process no longer
-        // have a parent process.
-        //
-        // status is returned to the parent process as this process's exit status and
-        // can be collected using the join syscall. A process exiting normally should
-        // (but is not required to) set status to 0.
-        //
-        // exit() never returns.
+        //close every file and all resouces associated with the process
+        //look in user process what else to release (Something in there represent a process)
+        //return status, if lcase noramlly return 0
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO seem too simple
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        unloadSections();
+        return status;
     }
 
     private int handleCreate(int name) {
@@ -470,7 +522,7 @@ public class UserProcess {
     }
 
     //int open(char *name);
-    //return a file desciptor
+    //return a file descriptor
     private int handleOpen(int name) {
 
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -494,8 +546,17 @@ public class UserProcess {
         return freeindex;
     }
 
-    //exit
-    //deallocate process and close any file that's open
+    private int handleClose(int fileDescriptor) {
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //TODO exception checking for Close
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        fileDescriptorTable[fileDescriptor].close();
+        fileDescriptorTable[fileDescriptor] = null;
+
+        return 0;
+    }
 
     /**
      * Handle a user exception. Called by
@@ -548,6 +609,7 @@ public class UserProcess {
 
     private int initialPC, initialSP;
     private int argc, argv;
+    private int maxPageNum;
 
     private static final int pageSize = Processor.pageSize;
     private static final char dbgProcess = 'a';
