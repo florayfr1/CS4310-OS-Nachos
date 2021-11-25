@@ -15,7 +15,7 @@ echo
     -exit
 halt
     -halt
-matmult (test on VM)
+matmult
     -write
     -exit
 mv

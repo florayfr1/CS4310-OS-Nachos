@@ -317,12 +317,6 @@ public class UserProcess {
      * Release any resources allocated by <tt>loadSections()</tt>.
      */
     protected void unloadSections() {
-        for (int i = 0; i < fileDescriptorTable.length; i++) {
-            if (fileDescriptorTable[i] != null) {
-                fileDescriptorTable[i].close();
-            }
-        }
-        coff.close();
     }
 
     /**
@@ -494,7 +488,15 @@ public class UserProcess {
         //TODO seem too simple
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        unloadSections();
+        for (int i = 0; i < fileDescriptorTable.length; i++) {
+            if (fileDescriptorTable[i] != null) {
+                fileDescriptorTable[i].close();
+                fileDescriptorTable[i] = null;
+            }
+        }
+        coff.close();
+        Kernel.kernel.terminate();
+
         return status;
     }
 

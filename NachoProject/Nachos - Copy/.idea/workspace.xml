@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/machine/CoffSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/machine/CoffSection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/machine/StubFileSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/machine/StubFileSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/test/a_readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserKernel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserKernel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +59,7 @@
     <configuration name="Project2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
-      <option name="PROGRAM_PARAMETERS" value="-x echo.coff" />
+      <option name="PROGRAM_PARAMETERS" value="-x mv.coff" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,10 +133,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637648509239">
+    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637817804467">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1637648509239" />
+    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1637817804467" />
     <state x="503" y="206" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636844731440">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
@@ -150,28 +153,37 @@
       <screen x="0" y="0" width="1600" height="852" />
     </state>
     <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1636844797992" />
-    <state width="1544" height="274" key="GridCell.Tab.0.bottom" timestamp="1637648591098">
+    <state width="1544" height="196" key="GridCell.Tab.0.bottom" timestamp="1637817807959">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="274" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
-    <state width="1544" height="274" key="GridCell.Tab.0.center" timestamp="1637648591098">
+    <state width="1544" height="196" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1637817807959" />
+    <state width="1544" height="196" key="GridCell.Tab.0.center" timestamp="1637817807959">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="274" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
-    <state width="1544" height="274" key="GridCell.Tab.0.left" timestamp="1637648591098">
+    <state width="1544" height="196" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1637817807959" />
+    <state width="1544" height="196" key="GridCell.Tab.0.left" timestamp="1637817807959">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="274" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
-    <state width="1544" height="274" key="GridCell.Tab.0.right" timestamp="1637648591098">
+    <state width="1544" height="196" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1637817807959" />
+    <state width="1544" height="196" key="GridCell.Tab.0.right" timestamp="1637817807959">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state width="1544" height="274" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1637648591098" />
-    <state x="242" y="0" width="768" height="852" key="find.popup" timestamp="1637606162813">
+    <state width="1544" height="196" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1637817807959" />
+    <state x="744" y="0" width="768" height="852" key="find.popup" timestamp="1637816751157">
       <screen x="0" y="0" width="1600" height="852" />
     </state>
-    <state x="242" y="0" width="768" height="852" key="find.popup/0.0.1600.852@0.0.1600.852" timestamp="1637606162813" />
+    <state x="744" y="0" width="768" height="852" key="find.popup/0.0.1600.852@0.0.1600.852" timestamp="1637816751157" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/nachos/userprog/UserKernel.java</url>
+          <line>100</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="lock.lockHolder.tcb" />
