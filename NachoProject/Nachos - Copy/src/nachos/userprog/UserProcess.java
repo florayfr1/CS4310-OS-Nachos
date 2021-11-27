@@ -440,6 +440,7 @@ public class UserProcess {
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //TODO exception checking for Unlink
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        handleClose(name);
         String fileName = readVirtualMemoryString(name, 256);
 
         boolean isRemove = ThreadedKernel.fileSystem.remove(fileName);
