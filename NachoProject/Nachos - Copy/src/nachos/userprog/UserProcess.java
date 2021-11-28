@@ -317,6 +317,7 @@ public class UserProcess {
      * Release any resources allocated by <tt>loadSections()</tt>.
      */
     protected void unloadSections() {
+        coff.close();
     }
 
     /**
@@ -396,6 +397,13 @@ public class UserProcess {
      */
     public int handleSyscall(int syscall, int a0, int a1, int a2, int a3) {
         //resource: https://www.doc.ic.ac.uk/lab/secondyear/spim/node8.html
+
+        //check for parameter
+        if(syscall!= syscallHalt && syscall!= syscallExit  && (a0 < 0 || a0 > 17))
+            return -1;
+        else if ((syscall == syscallRead || syscall == syscallWrite) && (a1 < 0 || a2 < 0))
+            return -1;
+
         switch (syscall) {
             case syscallHalt:
                 return handleHalt();
@@ -435,16 +443,22 @@ public class UserProcess {
         return 0;
     }
 
+
     private int handleUnlink(int name) {
 
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //TODO exception checking for Unlink
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        handleClose(name);
+        //not close if it still in the table
+        if (fileDescriptorTable[name] != null)
+            return -1;
+
         String fileName = readVirtualMemoryString(name, 256);
 
-        boolean isRemove = ThreadedKernel.fileSystem.remove(fileName);
+        //check if the address is return correctly
+        if (fileName == null)
+            return -1;
 
+        boolean isRemove = ThreadedKernel.fileSystem.remove(fileName);
+        if (!isRemove)
+            return -1;
         return 0;
     }
 
@@ -457,9 +471,18 @@ public class UserProcess {
         int numOfByteWrite = -1;
 
         byte[] bufferByte = new byte[count];
+
         int bufferTransfer = readVirtualMemory(buffer, bufferByte, 0, count);
 
+        if(fileDescriptorTable[fileDescriptor] == null)
+            return -1;
+
         numOfByteWrite = fileDescriptorTable[fileDescriptor].write(bufferByte,0, bufferTransfer);
+
+        //"error if the number of bytes written is smaller than the number of bytes requested"
+        if (numOfByteWrite < bufferTransfer || numOfByteWrite < 0)
+            return -1;
+
         return numOfByteWrite;
     }
 
@@ -472,9 +495,19 @@ public class UserProcess {
         int numOfByteRead = -1;
 
         byte[] bufferByte = new byte[count];
+
+        if(fileDescriptorTable[fileDescriptor] == null)
+            return -1;
+
         int byteTransfer = fileDescriptorTable[fileDescriptor].read(bufferByte, 0, count);
 
         numOfByteRead = writeVirtualMemory(buffer, bufferByte, 0, byteTransfer);
+
+
+        //not necessarily an error if number of bytes read is smaller than the number of
+        // bytes requested.
+        if (byteTransfer < 0)
+            return -1;
 
         return numOfByteRead;
     }
@@ -489,13 +522,14 @@ public class UserProcess {
         //TODO seem too simple
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        for (int i = 0; i < fileDescriptorTable.length; i++) {
+
+        for (int i = 2; i < fileDescriptorTable.length; i++) {
             if (fileDescriptorTable[i] != null) {
                 fileDescriptorTable[i].close();
                 fileDescriptorTable[i] = null;
             }
         }
-        coff.close();
+        unloadSections(); //release resources
         Kernel.kernel.terminate();
 
         return status;
@@ -503,11 +537,11 @@ public class UserProcess {
 
     private int handleCreate(int name) {
 
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //TODO exception checking for Create
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
         String filename = readVirtualMemoryString(name, 256);
+
+        if(filename == null)
+            return -1;
+
         int freeindex = -1;
         for (int i = 2; i < fileDescriptorTable.length; i++) {
             if (fileDescriptorTable[i] == null) {
@@ -515,11 +549,16 @@ public class UserProcess {
                 break;
             }
         }
+
         if (freeindex == -1) {
             return -1; //not found
         }
-        // public OpenFile open(String name, boolean create);
+
         OpenFile currentFile = ThreadedKernel.fileSystem.open(filename, true);
+
+        if (currentFile == null)
+            return -1;
+
         fileDescriptorTable[freeindex] = currentFile;
         return freeindex;
     }
@@ -528,11 +567,11 @@ public class UserProcess {
     //return a file descriptor
     private int handleOpen(int name) {
 
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //TODO exception checking for Open
-        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
         String filename = readVirtualMemoryString(name, 256);
+
+        if(filename == null)
+            return -1;
+
         int freeindex = -1;
         for (int i = 2; i < fileDescriptorTable.length; i++) {
             if (fileDescriptorTable[i] == null) {
@@ -543,8 +582,12 @@ public class UserProcess {
         if (freeindex == -1) {
             return -1; //not found
         }
-        // public OpenFile open(String name, boolean create);
+
         OpenFile currentFile = ThreadedKernel.fileSystem.open(filename, false);
+
+        if (currentFile == null)
+            return -1;
+
         fileDescriptorTable[freeindex] = currentFile;
         return freeindex;
     }
@@ -554,6 +597,9 @@ public class UserProcess {
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //TODO exception checking for Close
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        if(fileDescriptorTable[fileDescriptor] == null)
+            return -1;
 
         fileDescriptorTable[fileDescriptor].close();
         fileDescriptorTable[fileDescriptor] = null;
