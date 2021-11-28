@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/test/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/test/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserKernel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserKernel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +59,7 @@
     <configuration name="Project2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="nachos.machine.Machine" />
       <module name="Nachos" />
-      <option name="PROGRAM_PARAMETERS" value="-x mv.coff" />
+      <option name="PROGRAM_PARAMETERS" value="-x cp.coff" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/nachos/proj2" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,7 +115,7 @@
       <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
   </component>
@@ -127,54 +132,24 @@
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637817804467">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="69" y="9" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.852@0.0.1600.852" timestamp="1637817804467" />
-    <state x="503" y="206" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1636844731440">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="503" y="206" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.852@0.0.1600.852" timestamp="1636844731440" />
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1636844789990">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="463" y="163" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1600.852@0.0.1600.852" timestamp="1636844789990" />
-    <state x="324" y="231" width="951" height="390" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1637606103164">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="324" y="231" width="951" height="390" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.0.1600.852@0.0.1600.852" timestamp="1637606103164" />
-    <state x="526" y="119" key="FileChooserDialogImpl" timestamp="1636844797992">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="526" y="119" key="FileChooserDialogImpl/0.0.1600.852@0.0.1600.852" timestamp="1636844797992" />
-    <state width="1544" height="368" key="GridCell.Tab.0.bottom" timestamp="1637819161519">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="368" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1637819161519" />
-    <state width="1544" height="368" key="GridCell.Tab.0.center" timestamp="1637819161519">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="368" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1637819161519" />
-    <state width="1544" height="368" key="GridCell.Tab.0.left" timestamp="1637819161519">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="368" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1637819161519" />
-    <state width="1544" height="368" key="GridCell.Tab.0.right" timestamp="1637819161519">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state width="1544" height="368" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1637819161519" />
-    <state x="744" y="0" width="768" height="852" key="find.popup" timestamp="1637816751157">
-      <screen x="0" y="0" width="1600" height="852" />
-    </state>
-    <state x="744" y="0" width="768" height="852" key="find.popup/0.0.1600.852@0.0.1600.852" timestamp="1637816751157" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/nachos/userprog/UserKernel.java</url>
-          <line>100</line>
+          <line>101</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

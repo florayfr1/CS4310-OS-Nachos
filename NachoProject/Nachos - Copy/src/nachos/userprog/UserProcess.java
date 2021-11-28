@@ -399,10 +399,17 @@ public class UserProcess {
         //resource: https://www.doc.ic.ac.uk/lab/secondyear/spim/node8.html
 
         //check for parameter
-        if(syscall!= syscallHalt && syscall!= syscallExit  && (a0 < 0 || a0 > 17))
+        if(syscall != syscallHalt && syscall != syscallExit  && a0 < 0) {
+            System.out.println("a0: " + a0);
+            System.out.println((syscall!= syscallHalt && syscall!= syscallExit) + " is not halt and not exit");
+            System.out.println((a0 < 0) + " a0 < 0");
             return -1;
-        else if ((syscall == syscallRead || syscall == syscallWrite) && (a1 < 0 || a2 < 0))
+        }
+        else if ((syscall == syscallRead || syscall == syscallWrite) && (a1 < 0 || a2 < 0)) {
+            System.out.println((syscall == syscallRead || syscall == syscallWrite) + " is read or write");
+            System.out.println((a1 < 0 || a2 < 0) + "(a1 < 0 || a2 < 0)");
             return -1;
+        }
 
         switch (syscall) {
             case syscallHalt:
@@ -446,9 +453,9 @@ public class UserProcess {
 
     private int handleUnlink(int name) {
 
-        //not close if it still in the table
-        if (fileDescriptorTable[name] != null)
-            return -1;
+//        //not close if it still in the table
+//        if (fileDescriptorTable[name] != null)
+//            return -1;
 
         String fileName = readVirtualMemoryString(name, 256);
 
