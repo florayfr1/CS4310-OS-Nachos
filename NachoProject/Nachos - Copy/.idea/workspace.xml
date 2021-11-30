@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="789bce23-cb34-4d45-9d28-89ca52e913ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserKernel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/nachos/userprog/UserProcess.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/test/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/test/test2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserKernel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserKernel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/nachos/test/test4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/test/test4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/nachos/userprog/UserProcess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +111,7 @@
       <item itemvalue="Application.ThreadGrader5_PriorityScheduler_noDonation" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
   </component>
@@ -137,12 +133,31 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1544" height="287" key="GridCell.Tab.0.bottom" timestamp="1638231630202">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="287" key="GridCell.Tab.0.bottom/0.0.1600.852@0.0.1600.852" timestamp="1638231630202" />
+    <state width="1544" height="287" key="GridCell.Tab.0.center" timestamp="1638231630202">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="287" key="GridCell.Tab.0.center/0.0.1600.852@0.0.1600.852" timestamp="1638231630202" />
+    <state width="1544" height="287" key="GridCell.Tab.0.left" timestamp="1638231630202">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="287" key="GridCell.Tab.0.left/0.0.1600.852@0.0.1600.852" timestamp="1638231630202" />
+    <state width="1544" height="287" key="GridCell.Tab.0.right" timestamp="1638231630202">
+      <screen x="0" y="0" width="1600" height="852" />
+    </state>
+    <state width="1544" height="287" key="GridCell.Tab.0.right/0.0.1600.852@0.0.1600.852" timestamp="1638231630202" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,1 @@
-cp
-    -write
-    -open
-    -read
-    -creat
-    -close
-    -exit
+

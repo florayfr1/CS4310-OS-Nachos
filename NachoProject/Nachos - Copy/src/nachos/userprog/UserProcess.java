@@ -537,7 +537,7 @@ public class UserProcess {
             }
         }
         unloadSections(); //release resources
-        Kernel.kernel.terminate();
+        UThread.finish();
 
         return status;
     }
