@@ -457,7 +457,7 @@ public class UserProcess {
 //        if (fileDescriptorTable[name] != null)
 //            return -1;
 
-        String fileName = readVirtualMemoryString(name, 256);
+        String fileName = readVirtualMemoryString(name, maxSize-1);
 
         //check if the address is return correctly
         if (fileName == null)
@@ -481,7 +481,7 @@ public class UserProcess {
 
         int bufferTransfer = readVirtualMemory(buffer, bufferByte, 0, count);
 
-        if(fileDescriptorTable[fileDescriptor] == null)
+        if(fileDescriptor>maxSize||fileDescriptorTable[fileDescriptor] == null)
             return -1;
 
         numOfByteWrite = fileDescriptorTable[fileDescriptor].write(bufferByte,0, bufferTransfer);
@@ -503,7 +503,7 @@ public class UserProcess {
 
         byte[] bufferByte = new byte[count];
 
-        if(fileDescriptorTable[fileDescriptor] == null)
+        if(fileDescriptor>maxSize||fileDescriptorTable[fileDescriptor] == null)
             return -1;
 
         int byteTransfer = fileDescriptorTable[fileDescriptor].read(bufferByte, 0, count);
@@ -530,7 +530,7 @@ public class UserProcess {
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
-        for (int i = 2; i < fileDescriptorTable.length; i++) {
+        for (int i = 0; i < fileDescriptorTable.length; i++) {
             if (fileDescriptorTable[i] != null) {
                 fileDescriptorTable[i].close();
                 fileDescriptorTable[i] = null;
@@ -544,7 +544,7 @@ public class UserProcess {
 
     private int handleCreate(int name) {
 
-        String filename = readVirtualMemoryString(name, 256);
+        String filename = readVirtualMemoryString(name, maxSize-1);
 
         if(filename == null)
             return -1;
@@ -574,7 +574,7 @@ public class UserProcess {
     //return a file descriptor
     private int handleOpen(int name) {
 
-        String filename = readVirtualMemoryString(name, 256);
+        String filename = readVirtualMemoryString(name, maxSize-1);
 
         if(filename == null)
             return -1;
@@ -605,7 +605,7 @@ public class UserProcess {
         //TODO exception checking for Close
         //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-        if(fileDescriptorTable[fileDescriptor] == null)
+        if(fileDescriptor>maxSize||fileDescriptorTable[fileDescriptor] == null)
             return -1;
 
         fileDescriptorTable[fileDescriptor].close();
@@ -668,6 +668,7 @@ public class UserProcess {
     private int maxPageNum;
 
     private static final int pageSize = Processor.pageSize;
+    private static final int maxSize= 256;
     private static final char dbgProcess = 'a';
 
     private OpenFile[] fileDescriptorTable;
