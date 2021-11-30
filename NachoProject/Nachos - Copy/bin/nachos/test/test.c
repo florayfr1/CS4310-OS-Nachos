@@ -174,11 +174,12 @@ int testReadAndWrite() {
         }
     }
 }
-
-
 int main() {
 
     createTestFileNames();
+
+    // char* args[] = {"Arg1>","Arg2>"};
+    // exec("echo.coff", 2, args);
 
     testCreat();
     printf("\nTesting reading and writing...\n");
@@ -201,7 +202,6 @@ int main() {
 
     testClose();
 
-    
     printf("\nTesting creating long names...\n");
     testCreatLongName();
     printf("\nTesting opening long names...\n");
